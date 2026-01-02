@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QC & Testing - Carline Auto Pvt. Ltd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="QC.css" />
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css" />
+    <style>
+      /* QC.css */
+
+      /* Page Header Styles */
+      .page-header {
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      /* Text Gradient */
+      .text-gradient {
+        background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Testing Procedure Cards Animation */
+      .testing-card {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .testing-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .testing-card:hover::before {
+        left: 100%;
+      }
+
+      /* Quality Standards Section */
+      .quality-standards {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 640px) {
+        .page-header {
+          min-height: 30vh;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+
+        .testing-card {
+          padding: 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .page-header {
+          min-height: 50vh;
+        }
+      }
+
+      /* Smooth transitions for all interactive elements */
+      .testing-card,
+      .cta-button {
+        transition: all 0.3s ease;
+      }
+
+      /* Print Styles */
+      @media print {
+        .cta-button {
+          display: none;
+        }
+
+        .page-header {
+          min-height: auto;
+          background: white !important;
+          color: black;
+        }
+
+        .text-gradient {
+          background: none;
+          -webkit-text-fill-color: black;
+          color: black;
+        }
+      }
+
+      /* Loading states */
+      .testing-card img {
+        transition: opacity 0.3s ease;
+      }
+
+      .testing-card img:not([src]) {
+        opacity: 0;
+      }
+
+      /* Focus styles for accessibility */
+      .testing-card:focus,
+      .cta-button:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      /* Animation for content reveal */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+    <!-- Hero Section -->
+    <section class="fabrication-hero relative overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/Img/Video/welding-poster.jpg"
+      >
+        <source src="/Img/Video/welding.mp4" type="video/mp4" />
+        <!-- Fallback if video fails -->
+        <img
+          src="/Img/Video/welding-poster.jpg"
+          alt="Welding & Fabrication"
+          class="w-full h-full object-cover"
+        />
+      </video>
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-blue-900/40"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10"
+      >
+        <div class="text-center text-white">
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight"
+          >
+            Quality Control & <span class="text-gray-100">Testing</span>
+          </h1>
+
+          <p
+            class="text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            Ensuring excellence through rigorous quality control processes and
+            comprehensive testing procedures Ensuring excellence through
+            rigorous quality control processes and comprehensive testing
+            procedures
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="Contact.html"
+              class="cta-button cta-secondary inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-800 border-2 border-gray-300 rounded-lg font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:border-gray-400"
+            >
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <span>Request Quote</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QC Overview -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+        >
+          <div>
+            <h2
+              class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+            >
+              Our Quality <span class="text-gradient">Commitment</span>
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              At Carline Auto, quality is embedded in every stage of our
+              manufacturing process. Our comprehensive Quality Control and
+              Testing procedures ensure that every product meets the highest
+              standards of precision, durability, and performance.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              From raw material inspection to final product testing, our
+              dedicated QC team employs advanced testing equipment and
+              methodologies to guarantee excellence in every component we
+              manufacture.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-900">
+                    ISO 9001:2015 Certified
+                  </h3>
+                  <p class="text-sm text-gray-600 mt-1">
+                    International quality management standards
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-900">
+                    Advanced Testing Equipment
+                  </h3>
+                  <p class="text-sm text-gray-600 mt-1">
+                    State-of-the-art measurement and testing tools
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Skilled QC Team</h3>
+                  <p class="text-sm text-gray-600 mt-1">
+                    Experienced quality control professionals
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-gray-900">
+                    Documented Processes
+                  </h3>
+                  <p class="text-sm text-gray-600 mt-1">
+                    Comprehensive quality documentation
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="bg-gray-100 rounded-xl p-6 shadow-lg">
+              <img
+                src="/Img/QC testing.png"
+                alt="QC Laboratory"
+                class="w-full h-auto rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testing Procedures -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+          >
+            Our Testing <span class="text-gradient">Procedures</span>
+          </h2>
+          <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive testing methodologies to ensure product reliability
+            and performance
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
+          <!-- Test 1 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-white-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 mb-3"
+                style="color: white"
+              >
+                Dimensional Inspection
+              </h3>
+              <p class="text-gray-600 mb-4" style="color: white">
+                Precise measurement of components using calibrated instruments
+                including micrometers, calipers, CMM, and optical comparators.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600" style="color: white">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Coordinate Measuring Machine (CMM)
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Digital Height Gauges
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Surface Plates & Granite Tables
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Test 2 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 mb-3"
+                style="color: white"
+              >
+                Material Testing
+              </h3>
+              <p class="text-gray-600 mb-4" style="color: white">
+                Verification of material composition and properties through
+                chemical analysis, hardness testing, and metallurgical
+                examination.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center" style="color: white">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Rockwell & Brinell Hardness Testers
+                </li>
+                <li class="flex items-center" style="color: white">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Spectrometer Analysis
+                </li>
+                <li class="flex items-center" style="color: white">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Material Certification Verification
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Test 3 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 mb-3"
+                style="color: white"
+              >
+                Weld Quality Inspection
+              </h3>
+              <p class="text-gray-600 mb-4" style="color: white">
+                Comprehensive evaluation of weld integrity through visual
+                inspection, penetrant testing, and ultrasonic examination.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600" style="color: white">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Dye Penetrant Testing (DPT)
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Ultrasonic Testing (UT)
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Visual Weld Inspection
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Test 4 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 mb-3"
+                style="color: white"
+              >
+                Pressure Testing
+              </h3>
+              <p class="text-gray-600 mb-4" style="color: white">
+                Hydrostatic and pneumatic pressure testing of tanks and pressure
+                vessels to verify structural integrity and leak-proof
+                performance.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600" style="color: white">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Hydrostatic Test Pumps
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Pressure Gauges & Calibrators
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Leak Detection Systems
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Test 5 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-yellow-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 mb-3"
+                style="color: white"
+              >
+                Surface Finish Evaluation
+              </h3>
+              <p class="text-gray-600 mb-4" style="color: white">
+                Assessment of surface quality, coating thickness, and finish
+                consistency using specialized measurement instruments.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600" style="color: white">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Surface Roughness Testers
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Coating Thickness Gauges
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Visual Inspection Standards
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Test 6 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-indigo-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 mb-3"
+                style="color: white"
+              >
+                Functional Testing
+              </h3>
+              <p class="text-gray-600 mb-4" style="color: white">
+                Performance validation of assembled products under simulated
+                operating conditions to ensure functionality and reliability.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600" style="color: white">
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Air Flow Testing for Filters
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Assembly Fit & Function Checks
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-4 h-4 text-green-500 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Endurance & Cycle Testing
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Header and Footer using fetch -->
+    <script>
+      // Load Header
+      fetch("/Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Load header JS after header is inserted
+          const headerScript = document.createElement("script");
+          headerScript.src = "/Header/header.js";
+          document.body.appendChild(headerScript);
+        })
+        .catch((error) => console.error("Error loading header:", error));
+
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+
+    <script>
+      // QC.js - Quality Control Page JavaScript
+
+      (function () {
+        "use strict";
+
+        // Initialize page functionality
+        function initializeQCPage() {
+          // Add animation classes to testing procedure cards
+          const testingCards = document.querySelectorAll(
+            ".bg-white.rounded-xl"
+          );
+          testingCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+            card.classList.add("animate-fade-in-up");
+          });
+
+          // Add smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute("href"));
+              if (target) {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            });
+          });
+
+          // Initialize image lazy loading
+          const images = document.querySelectorAll("img");
+          images.forEach((img) => {
+            if (img.complete) {
+              img.classList.add("loaded");
+            } else {
+              img.addEventListener("load", function () {
+                this.classList.add("loaded");
+              });
+            }
+          });
+
+          console.log("QC & Testing page initialized successfully");
+        }
+
+        // Auto-initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initializeQCPage);
+        } else {
+          initializeQCPage();
+        }
+
+        // Export functions if needed
+        window.QCPage = {
+          initialize: initializeQCPage,
+        };
+      })();
+    </script>
+  </body>
+</html>

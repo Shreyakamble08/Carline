@@ -1,0 +1,125 @@
+/* Nav link */
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link:hover { color: #555; }
+
+/* Dropdown Icon */
+.dropdown-icon {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon on hover (desktop) */
+.group:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Desktop dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background: #fff;
+  min-width: 240px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all .3s;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.group:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+/* Hamburger */
+.bar {
+  width: 26px;
+  height: 3px;
+  background: #333;
+  transition: all .3s;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+}
+
+.mobile-menu a {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Mobile Dropdown */
+.mobile-dropdown-btn {
+  width: 100%;
+  text-align: left;
+  padding: 12px 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-icon {
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+.mobile-dropdown-menu {
+  display: none;
+  padding-left: 15px;
+}
+
+.mobile-dropdown-menu a {
+  display: block;
+  padding: 10px 0;
+}
+
+/* Rotate icon when open */
+.mobile-dropdown.open .mobile-icon {
+  transform: rotate(180deg);
+}
+
+/* Contact */
+.contact-btn {
+  background: #666;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.mobile-contact {
+  background: #666;
+  color: #fff;
+  padding: 12px;
+  margin-top: 15px;
+  text-align: center;
+  border-radius: 6px;
+}

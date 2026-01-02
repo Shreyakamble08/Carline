@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machines & Equipment - Carline Auto Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="machine.css">
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css">
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Include Header -->
+    <div id="header-container"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section relative overflow-hidden">
+    <!-- Background Video -->
+    <video 
+        class="absolute inset-0 w-full h-full object-cover -z-10" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        poster="./Img/machinery-bg.jpg">
+        <source src="/Img/Video/welding.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+        <source src="https://videos.pexels.com/video-files/3047097/3047097-hd_1920_1080_30fps.webm" type="video/webm">
+        <!-- Fallback static image if video fails -->
+        <img src="./Img/machinery-bg.jpg" alt="Machinery Background" class="w-full h-full object-cover">
+    </video>
+
+    <!-- Dark transparent overlay (keeps text readable) -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-blue-900/50"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10">
+        <div class="text-center z-10">
+            <div class="inline-block mb-4">
+                <span class="bg-gradient-to-r from-gray-600 to-blue-600 text-white px-4 py-2 rounded-full text-xs sm:text-sm font-weight-semibold tracking-wide uppercase shadow-lg">
+                    State-of-the-Art Facilities
+                </span>
+            </div>
+            
+            <h1 class="hero-headline text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                Machines & <span class="text-gradient">Equipment</span>
+            </h1>
+            
+            <p class="hero-subheadline text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+                Comprehensive catalog of our advanced manufacturing machinery and equipment for precision sheet-metal fabrication
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Machines Catalog Section -->
+ <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-12 lg:mb-16">
+            <div class="inline-flex items-center justify-center gap-3 mb-4">
+                <div class="w-10 h-1 bg-gradient-to-r from-transparent to-blue-600"></div>
+                <span class="text-blue-700 font-medium tracking-widest uppercase text-sm">Manufacturing Excellence</span>
+                <div class="w-10 h-1 bg-gradient-to-l from-transparent to-blue-600"></div>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                Equipment <span class="text-blue-600">Catalog</span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Complete inventory of precision manufacturing machinery at Carline Auto Pvt. Ltd.
+            </p>
+        </div>
+
+        <!-- Machine Count Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="text-2xl lg:text-3xl font-bold text-blue-700 mb-1">36</div>
+                <div class="text-sm text-gray-600 font-medium">Total Machines</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="text-2xl lg:text-3xl font-bold text-blue-700 mb-1">10+</div>
+                <div class="text-sm text-gray-600 font-medium">Specialized Tools</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="text-2xl lg:text-3xl font-bold text-blue-700 mb-1">12+</div>
+                <div class="text-sm text-gray-600 font-medium">Welding Systems</div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-gray-200 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="text-2xl lg:text-3xl font-bold text-blue-700 mb-1">5+</div>
+                <div class="text-sm text-gray-600 font-medium">Surface Coating</div>
+            </div>
+        </div>
+
+        <!-- Main Machine Table Container -->
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+            <!-- Table Header -->
+            <div class="bg-gradient-to-r from-blue-50 to-gray-50 px-6 py-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">Complete Machine Inventory</h3>
+                <p class="text-sm text-gray-600 mt-1">Scroll to view all details. Click on a row for more information.</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="sticky left-0 bg-gray-50 px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                    </svg>
+                                    SR. NO.
+                                </div>
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    MACHINE NAME
+                                </div>
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                    MAKE
+                                </div>
+                            </th>
+                            <th scope="col" class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider whitespace-nowrap">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path>
+                                    </svg>
+                                    MACHINE NO.
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200" id="machines-table-body">
+                        <!-- Data rows inserted by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Table Footer with View More Button -->
+            <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div class="text-sm text-gray-600">
+                        Showing <span class="font-semibold" id="visible-count">10</span> of <span class="font-semibold">36</span> machines
+                    </div>
+                    <button id="view-more-btn" class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        <svg id="view-more-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        <span id="view-more-text">View More Machines</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Machine Categories Summary -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            <span class="inline-flex justify-center items-center px-3 py-2 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">Press Machines</span>
+            <span class="inline-flex justify-center items-center px-3 py-2 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">Lathes</span>
+            <span class="inline-flex justify-center items-center px-3 py-2 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 border border-yellow-200">Grinders</span>
+            <span class="inline-flex justify-center items-center px-3 py-2 rounded-full text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200">Welding</span>
+            <span class="inline-flex justify-center items-center px-3 py-2 rounded-full text-xs font-medium bg-red-100 text-red-800 border border-red-200">Coating</span>
+            <span class="inline-flex justify-center items-center px-3 py-2 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 border border-indigo-200">Cutting</span>
+        </div>
+    </div>
+
+    <style>
+        /* Table row striping for better readability */
+        tbody tr:nth-child(odd) {
+            background-color: #fafafa;
+        }
+        tbody tr:hover {
+            background-color: #f0f9ff;
+            transition: background-color 0.2s ease;
+        }
+        /* Make first column sticky on mobile */
+        @media (max-width: 768px) {
+            .sticky {
+                position: sticky;
+                left: 0;
+                z-index: 10;
+                background-color: inherit;
+            }
+        }
+    </style>
+
+    <script>
+        // Machine data from your spreadsheet
+        const machineData = [
+            { srNo: "1", name: "DOUBLE ACTION PRESS", make: "DATTA, No. 5", machineNo: "CAS/M-01" },
+            { srNo: "2", name: "RADIAL DRILLING MACHINE", make: "PRAKASH, 1\" DIA.", machineNo: "CAS/M-02" },
+            { srNo: "3", name: "BENCH GRINDER", make: "ESSVEE, BG 103", machineNo: "CAS/M-03" },
+            { srNo: "4", name: "SPINNING LATHE", make: "CHETAN, 4.6 FT.", machineNo: "CAS/M-04" },
+            { srNo: "5", name: "SPINNING LATHE", make: "CHETAN, 4.6 FT.", machineNo: "CAS/M-05" },
+            { srNo: "6", name: "AIR COMPRESSOR", make: "INGERSOLL RAND, T-30", machineNo: "CAS/M-06" },
+            { srNo: "7", name: "CENTRE LATHE", make: "MINAR, M-1, 7 FT.", machineNo: "CAS/M-07" },
+            { srNo: "8", name: "BELT GRINDER", make: "GRIND MAKE, FB 100", machineNo: "CAS/M-08" },
+            { srNo: "9", name: "CIRCLE CUTTING MACHINE", make: "HARVE MAKE, 900 MM DIA.", machineNo: "CAS/M-09" },
+            { srNo: "10", name: "SPOT WELDING MACHINE", make: "MECHLONIC MAKE, 15 KVA.", machineNo: "CAS/M-10" },
+            { srNo: "11", name: "75 T. PRESS", make: "BASANT MAKE, 75 T.", machineNo: "CAS/M-11" },
+            { srNo: "12", name: "200 T. PRESS", make: "BASANT MAKE, 200 T.", machineNo: "CAS/M-12" },
+            { srNo: "13", name: "WELDING MACHINE", make: "SIRSI MAKE, 400 AMP.", machineNo: "CAS/M-13" },
+            { srNo: "14", name: "WELDING MACHINE", make: "SIRSI MAKE, 400 AMP.", machineNo: "CAS/M-14" },
+            { srNo: "15", name: "HYDRAULIC PRESS", make: "ELCTROPNEUMATIC MAKE, 300 T.", machineNo: "CAS/M-15" },
+            { srNo: "16", name: "PRETREATMENT PLANT TANKS, 27 KW.", make: "", machineNo: "CAS/M-16" },
+            { srNo: "17", name: "PAINTING BOOTH.", make: "TAILOR MADE, 2700 X 1460 X 2000", machineNo: "CAS/M-17" },
+            { srNo: "18", name: "PAINTING OVEN", make: "TRISHUL MAKE, 30 KW.", machineNo: "CAS/M-18" },
+            { srNo: "19", name: "ENTERPRISES LATHE", make: "KIRLOSKAR MAKE, EP 2215", machineNo: "CAS/M-19" },
+            { srNo: "20", name: "RADIAL DRILLING MACHINE", make: "BATLIBOI MAKE, BVR -3, 1.5 \" DIA.", machineNo: "CAS/M-20" },
+            { srNo: "21", name: "SURFACE GRINDER", make: "PRAGA,250 x 600 MM", machineNo: "CAS/M-21" },
+            { srNo: "22", name: "SPOT WELDING MACHINE", make: "KEJRAC MAKE, 15 KVA", machineNo: "CAS/M-22" },
+            { srNo: "23", name: "MILLING MACHINE", make: "HMT MAKE, FN2V", machineNo: "CAS/M-23" },
+            { srNo: "24", name: "SHEARING MACHINE", make: "WELDOR MAKE,  4 X 2500 MM.", machineNo: "CAS/M-24" },
+            { srNo: "25", name: "AIR COMPRESSOR", make: "INGERSOLL RAND MAKE, 7 T 2", machineNo: "CAS/M-25" },
+            { srNo: "26", name: "POWDER COATING BOOTH", make: "", machineNo: "CAS/M-26" },
+            { srNo: "27", name: "POWDER COATING GUN-CORONA, SPRAY SYSTEM & CONTROL SYSTEM", make: "MITSUBA MAKE", machineNo: "CAS/M-27" },
+            { srNo: "28", name: "ROTARY CO2 WELDING SPM", make: "TECHNOCRAT MAKE", machineNo: "CAS/M-28" },
+            { srNo: "29", name: "PIPE CUTTING MACHING", make: "HITACHI MAKE", machineNo: "CAS/M-29" },
+            { srNo: "30", name: "CO2 WELDING MACHINE", make: "TECHNOCRAT MAKE", machineNo: "CAS/M-30" },
+            { srNo: "31", name: "TIG WELDING MACHINE", make: "TECHNOCRAT MAKE", machineNo: "CAS/M-31" },
+            { srNo: "32", name: "POWDER COATING GUN-TURBO", make: "MITSUBA MAKE", machineNo: "CAS/M-32" },
+            { srNo: "33", name: "CLIPPING MACHINE", make: "", machineNo: "CAS/M-33" },
+            { srNo: "34", name: "HOT PLATE", make: "", machineNo: "CAS/M-34" },
+            { srNo: "35", name: "CLIP FORMING MACHINE", make: "", machineNo: "CAS/M-35" },
+            { srNo: "36", name: "ADHESIVE S\\DISPENSING MACHINE", make: "", machineNo: "CAS/M-36" }
+        ];
+
+        // DOM elements
+        const tableBody = document.getElementById('machines-table-body');
+        const viewMoreBtn = document.getElementById('view-more-btn');
+        const viewMoreIcon = document.getElementById('view-more-icon');
+        const viewMoreText = document.getElementById('view-more-text');
+        const visibleCountSpan = document.getElementById('visible-count');
+
+        // Configuration
+        let visibleRows = 10;
+        const totalRows = machineData.length;
+
+        // Initialize table with first set of rows
+        function renderTable() {
+            tableBody.innerHTML = '';
+            const rowsToShow = machineData.slice(0, visibleRows);
+            
+            rowsToShow.forEach(machine => {
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-blue-50 transition-colors duration-150';
+                row.innerHTML = `
+                    <td class="sticky left-0 bg-inherit px-6 py-4 whitespace-nowrap">
+                        <span class="inline-flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-700 rounded-full font-semibold">${machine.srNo}</span>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="text-sm font-medium text-gray-900">${machine.name}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="text-sm text-gray-900">${machine.make || '—'}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800 border border-gray-300">
+                            ${machine.machineNo}
+                        </span>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+            
+            // Update visible count
+            visibleCountSpan.textContent = visibleRows;
+            
+            // Update button text and icon
+            if (visibleRows >= totalRows) {
+                viewMoreText.textContent = 'All Machines Shown';
+                viewMoreIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>';
+                viewMoreBtn.disabled = true;
+                viewMoreBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                viewMoreBtn.classList.remove('hover:-translate-y-0.5', 'hover:shadow-lg');
+            } else {
+                viewMoreText.textContent = 'View More Machines';
+                viewMoreIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>';
+                viewMoreBtn.disabled = false;
+                viewMoreBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                viewMoreBtn.classList.add('hover:-translate-y-0.5', 'hover:shadow-lg');
+            }
+        }
+
+        // View More button functionality
+        viewMoreBtn.addEventListener('click', () => {
+            if (visibleRows < totalRows) {
+                visibleRows = Math.min(visibleRows + 10, totalRows);
+                renderTable();
+                
+                // Smooth scroll to show new rows
+                const newRows = document.querySelectorAll('tbody tr');
+                if (newRows.length > 0) {
+                    newRows[newRows.length - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+        });
+
+        // Initialize the table on page load
+        document.addEventListener('DOMContentLoaded', renderTable);
+
+        // Make table rows clickable for potential future detail view
+        document.addEventListener('click', (e) => {
+            const row = e.target.closest('tbody tr');
+            if (row) {
+                // Add visual feedback on click
+                row.classList.add('bg-blue-50');
+                setTimeout(() => row.classList.remove('bg-blue-50'), 300);
+                
+                // You could expand this to show a detail modal or more information
+                const machineId = row.querySelector('td:first-child span').textContent;
+                console.log(`Clicked machine ${machineId}`);
+            }
+        });
+    </script>
+</section>
+    
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Load Header and Footer using fetch -->
+    <script>
+        // Load Header
+        fetch('/Header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Load header JS after header is inserted
+                const headerScript = document.createElement('script');
+                headerScript.src = './Header/h.js';
+                document.body.appendChild(headerScript);
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load Footer
+        fetch('/Footer/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    
+    <script src="machine.js"></script>
+</body>
+</html>

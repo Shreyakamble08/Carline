@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheet Metal Assemblies - Carline Auto Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="SheetMetal.css" />
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css" />
+    <style>
+      /* SheetMetal.css */
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Product Card Hover Effects */
+      .product-card {
+        transition: all 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      /* Material Tags */
+      .material-tag {
+        transition: all 0.2s ease;
+      }
+
+      .material-tag:hover {
+        background-color: #e5e7eb;
+        transform: scale(1.05);
+      }
+
+      /* CTA Button Animations */
+      .cta-button {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      /* Section Animations */
+      .product-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
+
+      .product-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 640px) {
+        .product-detail-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .product-image-container {
+          order: -1;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .product-detail-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        .cta-button,
+        .breadcrumb,
+        .header,
+        .footer {
+          display: none;
+        }
+
+        .product-section {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section
+      class="relative py-24 sm:py-24 lg:py-24 text-white overflow-hidden"
+    >
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/Img/sheetmetals.jpg"
+          alt="Sheet Metal Workshop"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Dark Transparent Overlay (keeps text readable) -->
+      <div class="absolute inset-0 z-10 bg-black opacity-60"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+            Sheet Metal Assemblies
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
+            Precision-engineered sheet metal assemblies for diverse industrial
+            applications with superior quality and durability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Overview -->
+    <section class="py-10 sm:py-16 bg-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+          >
+            Our <span class="text-blue-600">Sheet Metal Products</span>
+          </h2>
+        </div>
+
+        <!-- Product Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Product 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-64 md:h-72">
+              <img
+                src="Img/sheet metal center baring barcekts.jpg"
+                alt="Product Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-64 md:h-72">
+              <img
+                src="Img/sheet metal parts.jpg"
+                alt="Product Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-64 md:h-72">
+              <img
+                src="Img/sheet metal.jpg"
+                alt="Product Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-64 md:h-72">
+              <img
+                src="Img/SM - MS foot.jpg"
+                alt="Product Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-64 md:h-72">
+              <img
+                src="img/sheetmetal ,.jpg"
+                alt="Product Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-64 md:h-72">
+              <img
+                src="Img/sheet metal parts.jpg"
+                alt="Product Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Header and Footer using fetch -->
+    <script>
+      // Load Header
+      fetch("/Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Load header JS after header is inserted
+          const headerScript = document.createElement("script");
+          headerScript.src = "/Header/header.js";
+          document.body.appendChild(headerScript);
+        })
+        .catch((error) => console.error("Error loading header:", error));
+
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+
+    <script>
+      // SheetMetal.js
+
+      (function () {
+        "use strict";
+
+        // Initialize page functionality
+        function initializeSheetMetalPage() {
+          // Add scroll animations for product sections
+          const productSections = document.querySelectorAll(".product-section");
+
+          const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          }, observerOptions);
+
+          productSections.forEach((section) => {
+            observer.observe(section);
+          });
+
+          // Smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              const targetId = this.getAttribute("href");
+              if (targetId === "#") return;
+
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                const headerHeight =
+                  document.querySelector("header")?.offsetHeight || 0;
+                const targetPosition =
+                  targetElement.getBoundingClientRect().top +
+                  window.pageYOffset -
+                  headerHeight;
+
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: "smooth",
+                });
+              }
+            });
+          });
+
+          // Add loading states for buttons
+          document.querySelectorAll(".cta-button").forEach((button) => {
+            button.addEventListener("click", function () {
+              if (
+                this.href.includes("request-quote") ||
+                this.href.includes("contact")
+              ) {
+                // Add loading state
+                const originalText = this.innerHTML;
+                this.innerHTML = `
+                        <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Processing...
+                    `;
+                this.disabled = true;
+
+                // Reset after 2 seconds (simulating processing)
+                setTimeout(() => {
+                  this.innerHTML = originalText;
+                  this.disabled = false;
+                }, 2000);
+              }
+            });
+          });
+
+          // Initialize product image placeholders
+          initializeProductImages();
+
+          console.log("Sheet Metal page initialized successfully");
+        }
+
+        // Function to handle product image loading
+        function initializeProductImages() {
+          const productImages = document.querySelectorAll(
+            ".product-image-placeholder"
+          );
+
+          productImages.forEach((placeholder) => {
+            // In a real implementation, this would load actual product images
+            // For now, we'll just add a loading animation
+            placeholder.innerHTML = `
+                <div class="flex flex-col items-center justify-center h-full">
+                    <svg class="animate-pulse w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="mt-2 text-sm text-gray-500">Product Image</span>
+                </div>
+            `;
+          });
+        }
+
+        // Auto-initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener(
+            "DOMContentLoaded",
+            initializeSheetMetalPage
+          );
+        } else {
+          initializeSheetMetalPage();
+        }
+      })();
+    </script>
+  </body>
+</html>

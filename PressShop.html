@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Press Shop - Carline Auto Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="PressShop.css" />
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css" />
+
+    <style>
+      /* PressShop.css */
+
+      /* Page Header Styles */
+      .page-header {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+      }
+
+      /* Breadcrumb Styles */
+      .breadcrumb {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      /* Table Styles */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        padding: 12px 16px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #1f2937;
+        color: white;
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      tr:hover {
+        background-color: #f3f4f6;
+      }
+
+      /* Card Hover Effects */
+      .bg-white {
+        transition: all 0.3s ease;
+      }
+
+      .bg-white:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      /* Button Animations */
+      .inline-flex {
+        transition: all 0.3s ease;
+      }
+
+      .inline-flex:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Material and Application List Styles */
+      ul.space-y-4 li {
+        transition: all 0.2s ease;
+      }
+
+      ul.space-y-4 li:hover {
+        transform: translateX(5px);
+      }
+
+      /* Responsive Table */
+      @media (max-width: 768px) {
+        .overflow-x-auto {
+          border: 1px solid #e5e7eb;
+          border-radius: 0.5rem;
+        }
+
+        table {
+          font-size: 0.875rem;
+        }
+
+        th,
+        td {
+          padding: 8px 12px;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        .breadcrumb,
+        .inline-flex,
+        #header-container,
+        #footer-container {
+          display: none;
+        }
+
+        table {
+          font-size: 12px;
+        }
+
+        th {
+          background-color: #f3f4f6 !important;
+          color: #000 !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="./Img/machinery-bg.jpg"
+      >
+        <source src="/Img/Video/welding.mp4" type="video/mp4" />
+        <!-- Fallback for browsers that don't support video -->
+        <source
+          src="https://videos.pexels.com/video-files/3047097/3047097-hd_1920_1080_30fps.webm"
+          type="video/webm"
+        />
+        <!-- Fallback static image if video fails -->
+        <img
+          src="./Img/machinery-bg.jpg"
+          alt="Machinery Background"
+          class="w-full h-full object-cover"
+        />
+      </video>
+
+      <!-- Dark transparent overlay (keeps text readable) -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-blue-900/50"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10"
+      >
+        <div class="text-center z-10">
+          <h1
+            class="hero-headline text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+          >
+            Press<span class="text-gradient">Shop</span>
+          </h1>
+
+          <p
+            class="hero-subheadline text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            Advanced press machinery for precision metal forming and stamping
+            operations with consistent quality
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press Shop Overview -->
+    <section class="py-12 sm:py-16 bg-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+        >
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Precision Press Operations
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Our state-of-the-art press shop is equipped with advanced
+              machinery capable of handling a wide range of metal forming and
+              stamping operations. With capacities ranging from 30T to 300T, we
+              can produce components with high precision and repeatability.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Our experienced team specializes in deep drawing, blanking,
+              piercing, bending, and forming operations for various materials
+              including mild steel, stainless steel, and aluminum.
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="/Img/stamping.webp"
+              alt="Press Shop at Carline Auto"
+              class="rounded-lg shadow-lg w-full"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Capabilities -->
+    <section class="py-12 sm:py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            Key Capabilities
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Our press shop offers comprehensive metal forming solutions with
+            precision and efficiency
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-2"
+              style="color: white"
+            >
+              Deep Drawing
+            </h3>
+            <p class="text-gray-600" style="color: white">
+              Specialized in deep drawn components with precise
+              depth-to-diameter ratios for various applications.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-2"
+              style="color: white"
+            >
+              Blanking & Piercing
+            </h3>
+            <p class="text-gray-600" style="color: white">
+              High-precision blanking and piercing operations with tight
+              tolerances and clean edges.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-2"
+              style="color: white"
+            >
+              Bending & Forming
+            </h3>
+            <p class="text-gray-600" style="color: white">
+              Complex bending and forming operations with consistent angles and
+              minimal springback.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-yellow-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-2"
+              style="color: white"
+            >
+              Progressive Die Stamping
+            </h3>
+            <p class="text-gray-600" style="color: white">
+              Multi-stage progressive die stamping for high-volume production
+              with minimal handling.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-red-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-2"
+              style="color: white"
+            >
+              Embossing & Coining
+            </h3>
+            <p class="text-gray-600" style="color: white">
+              Precision embossing and coining operations for adding textures,
+              logos, and specific features.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#0f172a] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-indigo-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-2"
+              style="color: white"
+            >
+              Quality Assurance
+            </h3>
+            <p class="text-gray-600" style="color: white">
+              Comprehensive quality checks at every stage with advanced
+              measuring instruments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Machine Inventory -->
+    <section class="py-12 sm:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+            Press Shop Equipment
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Our comprehensive range of press machines ensures we can handle
+            projects of any scale and complexity
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table
+            class="min-w-full divide-y divide-gray-200 shadow-md rounded-lg overflow-hidden"
+          >
+            <thead class="bg-gray-800 text-white">
+              <tr>
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                >
+                  Sr. No.
+                </th>
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                >
+                  Machine Name/Make
+                </th>
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                >
+                  Model/No.
+                </th>
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                >
+                  Capacity/Spec
+                </th>
+                <th
+                  class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider"
+                >
+                  Location
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  1
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                  Hydraulic Press
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  HP-300T
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  300 Ton
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  Press Shop A
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  2
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                  Mechanical Power Press
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  MP-150T
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  150 Ton
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  Press Shop A
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  3
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                  C-Frame Press
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  CF-80T
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  80 Ton
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  Press Shop B
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  4
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                  Fly Press
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  FP-30T
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  30 Ton
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  Press Shop B
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  5
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                  Hydraulic Press
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  HP-100T
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  100 Ton
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  Press Shop A
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                >
+                  6
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
+                  Deep Drawing Press
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  DDP-200T
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  200 Ton
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                  Press Shop C
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <div class="mt-8 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Download Complete Machine List (PDF)
+                </a>
+            </div> -->
+      </div>
+    </section>
+
+    <!-- Materials & Applications -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">
+            Expertise & Capabilities
+          </h2>
+          <p class="mt-2 text-gray-600 text-sm">
+            Precision manufacturing across diverse materials and industries.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Left Card -->
+          <div
+            class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm hover:shadow-md transition"
+          >
+            <h3
+              class="text-lg font-semibold text-gray-900 mb-4 flex items-center"
+            >
+              <span class="bg-green-100 text-green-600 p-1.5 rounded-md mr-2">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2"
+                  />
+                </svg>
+              </span>
+              Materials We Work With
+            </h3>
+
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li>
+                <strong>Mild Steel:</strong> General fabrication & structures
+              </li>
+              <li>
+                <strong>Stainless Steel:</strong> SS 304 / SS 316 for durability
+              </li>
+              <li>
+                <strong>Aluminum:</strong> Lightweight precision components
+              </li>
+              <li>
+                <strong>Copper & Brass:</strong> Electrical & decorative parts
+              </li>
+              <li>
+                <strong>Galvanized Iron:</strong> Corrosion-resistant solutions
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Card -->
+          <div
+            class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm hover:shadow-md transition"
+          >
+            <h3
+              class="text-lg font-semibold text-gray-900 mb-4 flex items-center"
+            >
+              <span class="bg-blue-100 text-blue-600 p-1.5 rounded-md mr-2">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </span>
+              Typical Applications
+            </h3>
+
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li>
+                <strong>Automotive:</strong> Brackets, mounts & assemblies
+              </li>
+              <li>
+                <strong>Industrial Equipment:</strong> Panels, enclosures &
+                frames
+              </li>
+              <li><strong>HVAC Systems:</strong> Ducts, vents & supports</li>
+              <li>
+                <strong>Consumer Products:</strong> Functional & aesthetic
+                components
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Header and Footer using fetch -->
+    <script>
+      // Load Header
+      fetch("/Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Load header JS after header is inserted
+          const headerScript = document.createElement("script");
+          headerScript.src = "/Header/header.js";
+          document.body.appendChild(headerScript);
+        })
+        .catch((error) => console.error("Error loading header:", error));
+
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+
+    <script>
+      // PressShop.js
+
+      (function () {
+        "use strict";
+
+        // Initialize Press Shop Page
+        function initializePressShop() {
+          // Add smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute("href"));
+              if (target) {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            });
+          });
+
+          // Add loading animation for images
+          const images = document.querySelectorAll("img");
+          images.forEach((img) => {
+            img.addEventListener("load", function () {
+              this.classList.add("loaded");
+            });
+          });
+
+          // Table row hover effect enhancement
+          const tableRows = document.querySelectorAll("tbody tr");
+          tableRows.forEach((row) => {
+            row.addEventListener("mouseenter", function () {
+              this.style.transition = "all 0.2s ease";
+            });
+          });
+
+          // Material and application list item animations
+          const listItems = document.querySelectorAll("ul.space-y-4 li");
+          listItems.forEach((item) => {
+            item.addEventListener("mouseenter", function () {
+              this.style.transition = "all 0.2s ease";
+            });
+          });
+
+          // CTA button animations
+          const ctaButtons = document.querySelectorAll(".inline-flex");
+          ctaButtons.forEach((button) => {
+            button.addEventListener("mouseenter", function () {
+              this.style.transition = "all 0.3s ease";
+            });
+          });
+
+          console.log("Press Shop page initialized successfully");
+        }
+
+        // Auto-initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initializePressShop);
+        } else {
+          initializePressShop();
+        }
+      })();
+    </script>
+  </body>
+</html>

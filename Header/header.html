@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Header</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="header.css" />
+  </head>
+
+  <body class="bg-gray-100">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <!-- LOGO -->
+          <a href="/index.html">
+            <img src="Img/logo.png" class="h-10" alt="Company Logo" />
+          </a>
+
+          <!-- HAMBURGER -->
+          <button id="menuBtn" class="md:hidden flex flex-col gap-1.5">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
+          <!-- DESKTOP NAV -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/about.html" class="nav-link">About</a>
+
+            <!-- PRODUCTS -->
+            <div class="relative group">
+              <span class="nav-link dropdown-trigger">
+                Products <i class="fas fa-chevron-down dropdown-icon"></i>
+              </span>
+              <div class="dropdown-menu">
+                <a href="AirFilters.html">Air Filters</a>
+                <a href="AirTanks.html">Air Tanks</a>
+                <a href="OilTank.html">Oil Tanks</a>
+                <a href="SheetMetal.html">Sheet Metal</a>
+                <a href="stainlesssteel.html">Stainless Steel</a>
+              </div>
+            </div>
+
+            <!-- FACILITIES -->
+            <div class="relative group">
+              <span class="nav-link dropdown-trigger">
+                Facilities & Capabilities
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+              </span>
+              <div class="dropdown-menu">
+                <a href="PressShop.html">Press Shop</a>
+                <a href="fabrication.html">Fabrication</a>
+                <a
+                  href="PowerCoating.html"
+                  >Powder Coating</a
+                >
+                <a href="QC.html">QC & Testing</a>
+                <a href="toolroom.html">Tool Room</a>
+              </div>
+            </div>
+
+            <!-- <a href="/Machine&Equipment/machine.html" class="nav-link"
+              >Machines</a
+            >
+            <a href="/Downloads/Downloads.html" class="nav-link">Downloads</a> -->
+
+            <a href="/Contact.html" class="contact-btn">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobileMenu" class="mobile-menu md:hidden">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+
+        <!-- MOBILE PRODUCTS -->
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-btn">
+            Products <i class="fas fa-chevron-down mobile-icon"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="AirFilters.html">Air Filters</a>
+            <a href="AirTanks.html">Air Tanks</a>
+            <a href="OilTank.html">Oil Tanks</a>
+            <a href="SheetMetal.html">Sheet Metal</a>
+            <a href="stainlesssteel.html">Stainless Steel</a>
+          </div>
+        </div>
+
+        <!-- MOBILE FACILITIES -->
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-btn">
+            Facilities & Capabilities
+            <i class="fas fa-chevron-down mobile-icon"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="PressShop.html">Press Shop</a>
+            <a href="fabrication.html">Fabrication</a>
+            <a href="PowerCoating.html"
+              >Powder Coating</a
+            >
+            <a href="QC.html">QC & Testing</a>
+            <a href="toolroom.html">Tool Room</a>
+          </div>
+        </div>
+
+        <!-- <a href="/Machine&Equipment/machine.html">Machines</a>
+        <a href="/Downloads/Downloads.html">Downloads</a> -->
+
+        <a href="/Contact.html" class="mobile-contact">Contact Us</a>
+      </div>
+    </header>
+
+    <script src="header.js"></script>
+  </body>
+</html>

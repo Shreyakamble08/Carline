@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Tanks - Carline Auto Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Air Tanks Page Specific Styles */
+
+      /* Product Hero Section */
+      .product-hero {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      }
+
+      /* Material Cards Hover Effect */
+      .material-card {
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+      }
+
+      .material-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: #3b82f6;
+      }
+
+      /* Application Cards */
+      .application-card {
+        transition: all 0.3s ease;
+      }
+
+      .application-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      /* Download Items */
+      .download-item {
+        transition: all 0.2s ease;
+      }
+
+      .download-item:hover {
+        background-color: #f8fafc;
+        border-color: #3b82f6;
+      }
+
+      /* Form Styling */
+      .form-input:focus {
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      /* Table Styling */
+      .spec-table {
+        border-collapse: collapse;
+      }
+
+      .spec-table th {
+        background-color: #f9fafb;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .spec-table tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .product-hero h1 {
+          font-size: 2rem;
+        }
+
+        .material-card,
+        .application-card {
+          margin-bottom: 1rem;
+        }
+
+        .spec-table {
+          font-size: 0.875rem;
+        }
+
+        .spec-table th,
+        .spec-table td {
+          padding: 0.75rem 0.5rem;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        .cta-button,
+        .download-section,
+        .enquiry-form {
+          display: none;
+        }
+
+        .product-hero {
+          background: white !important;
+          color: black !important;
+        }
+      }
+    </style>
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Product Hero Section -->
+    <section
+      class="relative min-h-[85vh] flex items-center text-white overflow-hidden"
+    >
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="/Img/airtank.jpg"
+          alt="Industrial air tanks background"
+          class="w-full h-full object-cover scale-105"
+        />
+        <!-- Gradient Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"
+        ></div>
+      </div>
+
+      <!-- Decorative Blur Shape -->
+      <div
+        class="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
+      ></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <span
+          class="inline-block mb-4 px-5 py-1 text-sm font-medium tracking-wide uppercase bg-white/10 backdrop-blur-md rounded-full"
+        >
+          Industrial Solutions
+        </span>
+
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6"
+        >
+          High-Performance <span class="text-blue-400">Air Tanks</span>
+        </h1>
+
+        <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-200 mb-8">
+          Engineered for durability, safety, and efficiency — our air tanks
+          deliver reliable performance across demanding industrial environments.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="py-10 bg-gradient-to-b from-white to-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <!-- Left Content -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 mb-3">
+              Premium Air Tanks
+              <span class="text-blue-600">for Demanding Applications</span>
+            </h2>
+
+            <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+              Our precision-engineered air tanks are designed to perform under
+              extreme conditions while maintaining reliability, safety, and
+              efficiency.
+            </p>
+
+            <p class="text-gray-700 text-sm mb-5 leading-relaxed">
+              Manufactured using advanced welding processes and certified
+              materials, each unit undergoes strict quality and pressure
+              testing.
+            </p>
+
+            <!-- Key Features -->
+            <div class="mb-6">
+              <h3 class="text-sm font-semibold text-gray-900 mb-3">
+                Key Features
+              </h3>
+              <ul class="space-y-2">
+                <li class="flex items-start text-sm text-gray-700">
+                  <span
+                    class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-2"
+                  ></span>
+                  Continuous operation with minimal maintenance
+                </li>
+                <li class="flex items-start text-sm text-gray-700">
+                  <span
+                    class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-2"
+                  ></span>
+                  Corrosion-resistant coating for harsh environments
+                </li>
+                <li class="flex items-start text-sm text-gray-700">
+                  <span
+                    class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-2"
+                  ></span>
+                  Energy-efficient and pressure-stable design
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Image Section -->
+          <div>
+            <div class="relative">
+              <div
+                class="absolute inset-0 bg-blue-100 rounded-xl blur-xl opacity-40"
+              ></div>
+              <img
+                src="/Img/aairr.jpg"
+                alt="Industrial Air Tank"
+                class="relative w-full max-w-md mx-auto rounded-xl shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available Materials -->
+    <section class="py-12 relative overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="/Img/Video/welding.mp4" type="video/mp4" />
+        <!-- Fallback for browsers that don't support video -->
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Dark overlay for text readability -->
+      <div class="absolute inset-0 bg-black opacity-60 -z-10"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-white-900 mb-8 text-center"
+          style="color: white"
+        >
+          Available Materials
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white"
+          >
+            <h3 class="text-xl font-bold text-white-800 mb-3">
+              Stainless Steel 304
+            </h3>
+            <p class="text-white-600 mb-4">
+              Excellent corrosion resistance, suitable for food, pharmaceutical
+              and chemical industries.
+            </p>
+            <ul class="text-sm text-white-600 space-y-2">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>High corrosion resistance</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Hygienic and easy to clean</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Good mechanical properties</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white"
+          >
+            <h3 class="text-xl font-bold text-white-800 mb-3">
+              Stainless Steel 316
+            </h3>
+            <p class="text-white-600 mb-4">
+              Superior corrosion resistance, ideal for marine and chemical
+              processing applications.
+            </p>
+            <ul class="text-sm text-white-600 space-y-2">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Enhanced corrosion resistance</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Resistant to chlorides</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>High temperature strength</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white"
+          >
+            <h3 class="text-xl font-bold text-white-800 mb-3">Carbon Steel</h3>
+            <p class="text-white-600 mb-4">
+              Cost-effective solution for general industrial applications with
+              proper coating options.
+            </p>
+            <ul class="text-sm text-white-600 space-y-2">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Cost-effective</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>High strength-to-weight ratio</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Various coating options available</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="py-14 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Section Heading -->
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold text-gray-800">Product Gallery</h2>
+          <p class="text-gray-600 mt-2">
+            Explore our high-quality product range
+          </p>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="relative aspect-square overflow-hidden rounded-lg shadow-md group"
+          >
+            <img
+              src="Img/airtank1.png"
+              alt="Product 1"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="relative aspect-square overflow-hidden rounded-lg shadow-md group"
+          >
+            <img
+              src="Img/airtank2.png"
+              alt="Product 2"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative aspect-square overflow-hidden rounded-lg shadow-md group"
+          >
+            <img
+              src="Img/airtank3.png"
+              alt="Product 3"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="relative aspect-square overflow-hidden rounded-lg shadow-md group"
+          >
+            <img
+              src="Img/airtank4.png"
+              alt="Product 4"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Header and Footer using fetch -->
+    <script>
+      // Load Header
+      fetch("/Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Load header JS after header is inserted
+          const headerScript = document.createElement("script");
+          headerScript.src = "/Header/header.js";
+          document.body.appendChild(headerScript);
+        })
+        .catch((error) => console.error("Error loading header:", error));
+
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+
+    <script>
+      // Air Tanks Page JavaScript
+      (function () {
+        "use strict";
+
+        // Initialize page functionality
+        function initializeAirTanksPage() {
+          // Add smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              const targetId = this.getAttribute("href");
+              if (targetId === "#") return;
+
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                targetElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            });
+          });
+
+          // Form submission handling
+          const enquiryForm = document.querySelector("form");
+          if (enquiryForm) {
+            enquiryForm.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              // Basic form validation
+              const name = document.getElementById("name").value.trim();
+              const email = document.getElementById("email").value.trim();
+
+              if (!name || !email) {
+                alert("Please fill in all required fields.");
+                return;
+              }
+
+              // In a real implementation, you would send the form data to a server
+              // For now, we'll just show a success message
+              alert("Thank you for your enquiry! We will contact you soon.");
+              enquiryForm.reset();
+            });
+          }
+
+          // Download button functionality
+          document.querySelectorAll(".download-item a").forEach((button) => {
+            button.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              // In a real implementation, this would trigger the actual download
+              // For demonstration, we'll just show a message
+              const fileName =
+                this.closest(".download-item").querySelector("h3").textContent;
+              alert(`Downloading: ${fileName}`);
+
+              // Simulate download completion
+              setTimeout(() => {
+                console.log(`Download completed for: ${fileName}`);
+              }, 1000);
+            });
+          });
+
+          // Add animation to material cards on scroll
+          const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }
+            });
+          }, observerOptions);
+
+          // Observe material and application cards
+          document
+            .querySelectorAll(".material-card, .application-card")
+            .forEach((card) => {
+              card.style.opacity = "0";
+              card.style.transform = "translateY(20px)";
+              card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+              observer.observe(card);
+            });
+
+          console.log("Air Tanks page initialized successfully");
+        }
+
+        // Auto-initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initializeAirTanksPage);
+        } else {
+          initializeAirTanksPage();
+        }
+      })();
+    </script>
+  </body>
+</html>

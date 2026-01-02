@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Carline Auto Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Contact.css" />
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css" />
+    <style>
+      /* Hero Section */
+      .hero-section {
+        min-height: 400px;
+        position: relative;
+      }
+
+      /* Text Gradient */
+      .text-gradient {
+        background: linear-gradient(135deg, #4b5563 0%, #1e40af 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Contact Info Cards */
+      .contact-info-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .contact-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .icon-wrapper {
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(135deg, #4b5563 0%, #1e40af 100%);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      }
+
+      /* Form Container */
+      .form-container {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #111827;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      .form-label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        transition: all 0.3s ease;
+        background: white;
+      }
+
+      .form-input:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .form-input::placeholder {
+        color: #9ca3af;
+      }
+
+      /* File Upload Styling */
+      .file-upload-wrapper {
+        position: relative;
+      }
+
+      .file-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .file-label {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        border: 2px dashed #d1d5db;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: #f9fafb;
+      }
+
+      .file-label:hover {
+        border-color: #3b82f6;
+        background: #eff6ff;
+      }
+
+      .file-name {
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+
+      /* Submit Button */
+      .submit-btn {
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+        background: linear-gradient(135deg, #4b5563 0%, #90939c 100%);
+        color: white;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(130, 136, 145, 0.3);
+        font-size: 1rem;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(144, 144, 144, 0.4);
+      }
+
+      .submit-btn:active {
+        transform: translateY(0);
+      }
+
+      /* Regional Cards */
+      .regional-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .regional-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .regional-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #4b5563 0%, #1e40af 100%);
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      /* Map Container */
+      .map-container {
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Success/Error Messages */
+      .success-message {
+        background: #d1fae5;
+        color: #065f46;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #6ee7b7;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .error-message {
+        background: #fee2e2;
+        color: #991b1b;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #fca5a5;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .form-container {
+          padding: 1.5rem;
+        }
+
+        .form-title {
+          font-size: 1.5rem;
+        }
+
+        .contact-info-card {
+          padding: 1.5rem;
+        }
+
+        .regional-card {
+          padding: 1.5rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero-section {
+          min-height: 300px;
+        }
+
+        .form-container {
+          padding: 1.25rem;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .form-container,
+      .contact-info-card,
+      .regional-card {
+        animation: fadeIn 0.5s ease-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('/Img/company.jpeg')"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-blue-900/50"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32 relative z-10"
+      >
+        <div class="text-center">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+          >
+            Contact Us
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto">
+            Get in touch with our team for any inquiries or quote requests
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="py-12 sm:py-16 bg-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Phone -->
+          <div
+            class="contact-info-card"
+            style="background: linear-gradient(#2e4156)"
+          >
+            <div class="icon-wrapper">
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Phone</h3>
+            <p class="text-gray-300 mb-2">Pune Office</p>
+            <a
+              href="tel:+912027421766"
+              class="text-white hover:text-blue-400 transition-colors"
+              >+91 20 2742 1766</a
+            >
+            <p class="text-gray-300 mt-3 mb-2">Satara Factory</p>
+            <a
+              href="tel:+912162241250"
+              class="text-white hover:text-blue-400 transition-colors"
+              >+91 2162 241 250</a
+            >
+          </div>
+
+          <!-- Email -->
+          <div
+            class="contact-info-card"
+            style="background: linear-gradient(#2e4156)"
+          >
+            <div class="icon-wrapper">
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Email</h3>
+            <p class="text-gray-300 mb-2">Sales Inquiries</p>
+            <a
+              href="mailto:sales@carlineauto.com"
+              class="text-white hover:text-blue-400 transition-colors block mb-2"
+              >sales@carlineauto.com</a
+            >
+            <p class="text-gray-300 mb-2">General Inquiries</p>
+            <a
+              href="mailto:info@carlineauto.com"
+              class="text-white hover:text-blue-400 transition-colors block"
+              >info@carlineauto.com</a
+            >
+          </div>
+
+          <!-- Address -->
+          <div
+            class="contact-info-card"
+            style="background: linear-gradient(#2e4156)"
+          >
+            <div class="icon-wrapper">
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Address</h3>
+            <p class="text-gray-300 mb-2 font-semibold">Pune Office</p>
+            <p class="text-gray-200 text-sm leading-relaxed">
+              Survey No. 123, Pune-Satara Road, Pune, Maharashtra 411037
+            </p>
+            <p class="text-gray-300 mt-3 mb-2 font-semibold">Satara Factory</p>
+            <p class="text-gray-200 text-sm leading-relaxed">
+              Gat No. 456, MIDC Satara, Maharashtra 415001
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Forms Section -->
+    <section class="py-8 relative overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="/Img/Video/subaa.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Content -->
+      <div class="max-w-4xl mx-auto px-4">
+        <div
+          class="bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-6 sm:p-8"
+        >
+          <h2 class="text-2xl font-bold text-gray-900 text-center mb-4">
+            Post Your Enquiry
+          </h2>
+
+          <form class="space-y-4">
+            <!-- Name -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="text"
+                placeholder="First Name*"
+                class="form-input"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last Name*"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <!-- Contact -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="tel"
+                placeholder="Phone Number*"
+                class="form-input"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email Address*"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <!-- Message -->
+            <textarea
+              rows="3"
+              class="form-input"
+              placeholder="Your Message"
+            ></textarea>
+
+            <!-- Button -->
+            <div class="text-center pt-2">
+              <button class="submit-btn px-8 py-2 text-sm">
+                Submit Enquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regional Sales Section -->
+    <section class="py-12 sm:py-16 bg-gray-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Regional <span class="text-gradient">Sales Contacts</span>
+          </h2>
+          <p class="text-lg text-gray-600">Connect with our sales team</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Pune Office + Satara Factory Details -->
+          <div
+            class="regional-card"
+            style="background: linear-gradient(#2e4156)"
+          >
+            <!-- Pune Office -->
+            <div class="flex items-start mb-8">
+              <div class="regional-icon">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              </div>
+              <div class="ml-4 flex-1">
+                <h3 class="text-xl font-bold text-white mb-3">Pune Office</h3>
+                <div class="space-y-2 text-white">
+                  <p class="flex items-start">
+                    <svg
+                      class="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    <span class="text-sm"
+                      >Survey No. 123, Pune-Satara Road, Pune, Maharashtra
+                      411037</span
+                    >
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-white mr-2 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                    <a
+                      href="tel:+912027421766"
+                      class="text-sm hover:text-blue-400 transition-colors"
+                      >+91 20 2742 1766</a
+                    >
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-white mr-2 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <a
+                      href="mailto:pune@carlineauto.com"
+                      class="text-sm hover:text-blue-400 transition-colors"
+                      >pune@carlineauto.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Satara Factory -->
+            <div class="flex items-start">
+              <div class="regional-icon">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                  />
+                </svg>
+              </div>
+              <div class="ml-4 flex-1">
+                <h3 class="text-xl font-bold text-white mb-3">
+                  Satara Factory
+                </h3>
+                <div class="space-y-2 text-white">
+                  <p class="flex items-start">
+                    <svg
+                      class="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    <span class="text-sm"
+                      >Gat No. 456, MIDC Satara, Maharashtra 415001</span
+                    >
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-white mr-2 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                    <a
+                      href="tel:+912162241250"
+                      class="text-sm hover:text-blue-400 transition-colors"
+                      >+91 2162 241 250</a
+                    >
+                  </p>
+                  <p class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-white mr-2 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <a
+                      href="mailto:satara@carlineauto.com"
+                      class="text-sm hover:text-blue-400 transition-colors"
+                      >satara@carlineauto.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map (Right Column) -->
+          <div class="regional-card">
+            <div class="map-container" style="max-width: 600px; margin: 0 auto">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.4019607584634!2d73.8567437!3d18.5204303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0783c8c5c67%3A0x2e6c5e7d5e7d5e7d!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="350"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg shadow-lg"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load Header
+      fetch("/Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          const headerScript = document.createElement("script");
+          headerScript.src = "/Header/header.js";
+          document.body.appendChild(headerScript);
+        })
+        .catch((error) => console.error("Error loading header:", error));
+
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+
+    <script>
+      // File upload handling
+      document.addEventListener("DOMContentLoaded", function () {
+        // File upload display name
+        const fileInput = document.getElementById("quote-file");
+        const fileLabel = document.querySelector(".file-label .file-name");
+
+        if (fileInput) {
+          fileInput.addEventListener("change", function (e) {
+            if (e.target.files.length > 0) {
+              const fileName = e.target.files[0].name;
+              fileLabel.textContent = fileName;
+            } else {
+              fileLabel.textContent = "No File Chosen";
+            }
+          });
+        }
+
+        // Enquiry Form Submission
+        const enquiryForm = document.getElementById("enquiry-form");
+        if (enquiryForm) {
+          enquiryForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+              firstname: document.getElementById("enquiry-firstname").value,
+              lastname: document.getElementById("enquiry-lastname").value,
+              phone: document.getElementById("enquiry-phone").value,
+              email: document.getElementById("enquiry-email").value,
+              message: document.getElementById("enquiry-message").value,
+            };
+
+            // Validate form
+            if (!validateEnquiryForm(formData)) {
+              return;
+            }
+
+            // Show success message
+            showMessage(
+              enquiryForm,
+              "success",
+              "Thank you! Your enquiry has been submitted successfully. We will get back to you soon."
+            );
+
+            // Reset form
+            enquiryForm.reset();
+
+            // Here you would typically send the data to a server
+            console.log("Enquiry Form Data:", formData);
+          });
+        }
+
+        // Quote Form Submission
+        const quoteForm = document.getElementById("quote-form");
+        if (quoteForm) {
+          quoteForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+              name: document.getElementById("quote-name").value,
+              company: document.getElementById("quote-company").value,
+              phone: document.getElementById("quote-phone").value,
+              email: document.getElementById("quote-email").value,
+              product: document.getElementById("quote-product").value,
+              quantity: document.getElementById("quote-qty").value,
+              message: document.getElementById("quote-message").value,
+              file: document.getElementById("quote-file").files[0],
+            };
+
+            // Validate form
+            if (!validateQuoteForm(formData)) {
+              return;
+            }
+
+            // Show success message
+            showMessage(
+              quoteForm,
+              "success",
+              "Thank you! Your quote request has been submitted successfully. Our team will contact you shortly."
+            );
+
+            // Reset form
+            quoteForm.reset();
+            fileLabel.textContent = "No File Chosen";
+
+            // Here you would typically send the data to a server
+            console.log("Quote Form Data:", formData);
+          });
+        }
+      });
+
+      // Validation Functions
+      function validateEnquiryForm(data) {
+        // Validate first name
+        if (!data.firstname.trim()) {
+          showMessage(
+            document.getElementById("enquiry-form"),
+            "error",
+            "Please enter your first name."
+          );
+          return false;
+        }
+
+        // Validate last name
+        if (!data.lastname.trim()) {
+          showMessage(
+            document.getElementById("enquiry-form"),
+            "error",
+            "Please enter your last name."
+          );
+          return false;
+        }
+
+        // Validate phone
+        if (!validatePhone(data.phone)) {
+          showMessage(
+            document.getElementById("enquiry-form"),
+            "error",
+            "Please enter a valid phone number."
+          );
+          return false;
+        }
+
+        // Validate email
+        if (!validateEmail(data.email)) {
+          showMessage(
+            document.getElementById("enquiry-form"),
+            "error",
+            "Please enter a valid email address."
+          );
+          return false;
+        }
+
+        return true;
+      }
+
+      function validateQuoteForm(data) {
+        // Validate name
+        if (!data.name.trim()) {
+          showMessage(
+            document.getElementById("quote-form"),
+            "error",
+            "Please enter your name."
+          );
+          return false;
+        }
+
+        // Validate phone
+        if (!validatePhone(data.phone)) {
+          showMessage(
+            document.getElementById("quote-form"),
+            "error",
+            "Please enter a valid phone number."
+          );
+          return false;
+        }
+
+        // Validate email
+        if (!validateEmail(data.email)) {
+          showMessage(
+            document.getElementById("quote-form"),
+            "error",
+            "Please enter a valid email address."
+          );
+          return false;
+        }
+
+        // Validate file size if file is uploaded
+        if (data.file) {
+          const maxSize = 10 * 1024 * 1024; // 10MB
+          if (data.file.size > maxSize) {
+            showMessage(
+              document.getElementById("quote-form"),
+              "error",
+              "File size should not exceed 10MB."
+            );
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      function validatePhone(phone) {
+        const re = /^[\d\s\-\+\(\)]{10,}$/;
+        return re.test(phone.trim());
+      }
+
+      function showMessage(form, type, message) {
+        // Remove any existing messages
+        const existingMessage = form.querySelector(
+          ".success-message, .error-message"
+        );
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+
+        // Create new message element
+        const messageDiv = document.createElement("div");
+        messageDiv.className =
+          type === "success" ? "success-message" : "error-message";
+        messageDiv.textContent = message;
+
+        // Insert message at the top of the form
+        form.insertBefore(messageDiv, form.firstChild);
+
+        // Scroll to message
+        messageDiv.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+        // Auto-remove success messages after 5 seconds
+        if (type === "success") {
+          setTimeout(() => {
+            messageDiv.style.transition = "opacity 0.5s";
+            messageDiv.style.opacity = "0";
+            setTimeout(() => messageDiv.remove(), 500);
+          }, 5000);
+        }
+      }
+
+      // Smooth scroll for internal links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add input animation on focus
+      document.querySelectorAll(".form-input").forEach((input) => {
+        input.addEventListener("focus", function () {
+          this.parentElement.classList.add("focused");
+        });
+
+        input.addEventListener("blur", function () {
+          if (!this.value) {
+            this.parentElement.classList.remove("focused");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

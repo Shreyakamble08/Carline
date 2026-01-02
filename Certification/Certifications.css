@@ -1,0 +1,130 @@
+/* Certificate Container Styles */
+.certificate-container {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.certificate-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Quality Process Icons */
+.quality-icon {
+    transition: all 0.3s ease;
+}
+
+.quality-card:hover .quality-icon {
+    transform: scale(1.1);
+}
+
+/* Commitment Section */
+.commitment-section {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .certificate-container {
+        margin: 0 auto;
+    }
+    
+    .quality-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .certificate-details {
+        padding-left: 2rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.certificate-image {
+    transition: opacity 0.3s ease;
+}
+
+.certificate-image.loading {
+    opacity: 0;
+}
+
+.certificate-image.loaded {
+    opacity: 1;
+}
+
+/* Print Styles */
+@media print {
+    .cta-buttons,
+    .download-button {
+        display: none;
+    }
+    
+    .commitment-section {
+        background: white !important;
+        color: black !important;
+        border: 2px solid #1e40af;
+    }
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+    .certificate-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .certificate-image {
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .certificate-image {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1025px) {
+    .certificate-image {
+        height: 320px;
+        object-fit: cover;
+    }
+}
+
+/* Ensure proper image sizing */
+.certificate-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Quality cards responsive behavior */
+.quality-card {
+    transition: transform 0.3s ease;
+}
+
+.quality-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Button hover effects */
+.download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Section spacing for mobile */
+@media (max-width: 640px) {
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

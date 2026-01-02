@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Carline Auto Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="total.css" />
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/Header/header.css" />
+    <style>
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Modal Styles */
+      #enquiryModal {
+        backdrop-filter: blur(4px);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .product-nav-btn {
+          @apply px-3 py-1 text-sm;
+        }
+
+        .product-content {
+          @apply p-4;
+        }
+      }
+
+      /* Loading Animation */
+      .product-card {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Filter Animation */
+      .products-grid .product-card {
+        transition: all 0.3s ease;
+      }
+
+      .products-grid .product-card.hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="fabrication-hero relative overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/Img/Video/welding-poster.jpg"
+      >
+        <source src="/Img/Video/welding.mp4" type="video/mp4" />
+        <!-- Fallback if video fails -->
+        <img
+          src="/Img/Video/welding-poster.jpg"
+          alt="Welding & Fabrication"
+          class="w-full h-full object-cover"
+        />
+      </video>
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-blue-900/40"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10"
+      >
+        <div class="text-center text-white">
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight"
+          >
+            Our<span class="text-gradient"> Tools </span>
+          </h1>
+
+          <p
+            class="text-base sm:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            Our advanced tooling ensures precise, reliable, and high-quality sheet metal components for diverse industrial needs.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="Contact.html"
+              class="cta-button cta-secondary inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-800 border-2 border-gray-300 rounded-lg font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:border-gray-400"
+            >
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <span>Request Quote</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Overview -->
+<section class="py-8 sm:py-10 bg-gray-200"> <!-- reduced top padding -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-8"> <!-- reduced margin-bottom -->
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">
+        TOOLS
+      </h2>
+    </div>
+
+    <!-- Product Image Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/tooling (2).jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/tooling (3).jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/tooling (4).jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/tooling (5).jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/Tool SS Spacer .jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/Tooling E449 .jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/Tooling SS  part .jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/TOOLs  SS 304 SBS .jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+      <div class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition">
+        <img src="/Img/tooling.jpg" class="w-full h-64 object-contain hover:scale-105 transition duration-500" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Header and Footer using fetch -->
+    <script>
+      // Load Header
+      fetch("/Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Load header JS after header is inserted
+          const headerScript = document.createElement("script");
+          headerScript.src = "/Header/header.js";
+          document.body.appendChild(headerScript);
+        })
+        .catch((error) => console.error("Error loading header:", error));
+
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+
+    <script>
+      // Products Page JavaScript
+      (function () {
+        "use strict";
+
+        // Initialize products page
+        function initializeProductsPage() {
+          initializeProductFilter();
+          initializeEnquiryModal();
+          initializeSmoothScrolling();
+
+          console.log("Products page initialized successfully");
+        }
+
+        // Product filtering functionality
+        function initializeProductFilter() {
+          const filterButtons = document.querySelectorAll(".product-nav-btn");
+          const productCards = document.querySelectorAll(".product-card");
+
+          filterButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              // Remove active class from all buttons
+              filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+              // Add active class to clicked button
+              this.classList.add("active");
+
+              const category = this.getAttribute("data-category");
+
+              // Filter products
+              productCards.forEach((card) => {
+                if (
+                  category === "all" ||
+                  card.getAttribute("data-category") === category
+                ) {
+                  card.style.display = "block";
+                  setTimeout(() => {
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                  }, 10);
+                } else {
+                  card.style.opacity = "0";
+                  card.style.transform = "translateY(20px)";
+                  setTimeout(() => {
+                    card.style.display = "none";
+                  }, 300);
+                }
+              });
+            });
+          });
+        }
+
+        // Enquiry modal functionality
+        function initializeEnquiryModal() {
+          const modal = document.getElementById("enquiryModal");
+          const enquiryButtons = document.querySelectorAll(".enquiry-btn");
+          const closeModal = document.getElementById("closeModal");
+          const enquiryForm = document.getElementById("enquiryForm");
+          const enquiryProduct = document.getElementById("enquiryProduct");
+
+          // Open modal
+          enquiryButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+              const product = this.getAttribute("data-product");
+              enquiryProduct.value = product;
+              modal.classList.remove("hidden");
+            });
+          });
+
+          // Close modal
+          closeModal.addEventListener("click", function () {
+            modal.classList.add("hidden");
+          });
+
+          // Close modal when clicking outside
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              modal.classList.add("hidden");
+            }
+          });
+
+          // Handle form submission
+          enquiryForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const product = enquiryProduct.value;
+
+            // Here you would typically send the data to your server
+            console.log("Enquiry submitted:", {
+              product: product,
+              name: formData.get("name"),
+              company: formData.get("company"),
+              email: formData.get("email"),
+              phone: formData.get("phone"),
+              message: formData.get("message"),
+            });
+
+            // Show success message (in a real implementation)
+            alert("Thank you for your enquiry! We will get back to you soon.");
+
+            // Close modal and reset form
+            modal.classList.add("hidden");
+            this.reset();
+          });
+        }
+
+        // Smooth scrolling for anchor links
+        function initializeSmoothScrolling() {
+          const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+          anchorLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              const targetId = this.getAttribute("href");
+              const targetElement = document.querySelector(targetId);
+
+              if (targetElement) {
+                const headerHeight =
+                  document.querySelector("#header-container")?.offsetHeight ||
+                  0;
+                const targetPosition =
+                  targetElement.offsetTop - headerHeight - 20;
+
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: "smooth",
+                });
+              }
+            });
+          });
+        }
+
+        // Auto-initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initializeProductsPage);
+        } else {
+          initializeProductsPage();
+        }
+      })();
+    </script>
+  </body>
+</html>
