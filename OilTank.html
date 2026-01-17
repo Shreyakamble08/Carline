@@ -1,488 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oil Tanks - Carline Auto Pvt. Ltd.</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="OilTanks.css">
+    <link rel="stylesheet" href="OilTanks.css" />
     <!-- Header CSS -->
-    <link rel="stylesheet" href="/Header/header.css">
+    <link rel="stylesheet" href="/Header/header.css" />
     <!-- Footer CSS will be loaded dynamically -->
-    <link rel="stylesheet" href="/Footer/footer.html">
-
+    <link rel="stylesheet" href="/Footer/footer.html" />
 
     <style>
-        /* OilTanks.css */
+      /* OilTanks.css */
 
-/* Product Hero Section */
-.product-hero {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-}
+      /* Product Hero Section */
+      .product-hero {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+      }
 
-/* Table Styles */
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+      /* Table Styles */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
 
-th, td {
-    padding: 0.75rem 1.5rem;
-    text-align: left;
-}
+      th,
+      td {
+        padding: 0.75rem 1.5rem;
+        text-align: left;
+      }
 
-th {
-    background-color: #f9fafb;
-    font-weight: 600;
-    color: #374151;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.75rem;
-}
+      th {
+        background-color: #f9fafb;
+        font-weight: 600;
+        color: #374151;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.75rem;
+      }
 
-tr:nth-child(even) {
-    background-color: #f9fafb;
-}
+      tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
 
-/* Form Styles */
-input, select, textarea {
-    transition: all 0.3s ease;
-}
+      /* Form Styles */
+      input,
+      select,
+      textarea {
+        transition: all 0.3s ease;
+      }
 
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
 
-/* Feature Cards */
-.feature-card {
-    transition: all 0.3s ease;
-    border: 1px solid #e5e7eb;
-}
+      /* Feature Cards */
+      .feature-card {
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+      }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
 
-/* Application Icons */
-.application-icon {
-    transition: all 0.3s ease;
-}
+      /* Application Icons */
+      .application-icon {
+        transition: all 0.3s ease;
+      }
 
-.feature-card:hover .application-icon {
-    transform: scale(1.1);
-}
+      .feature-card:hover .application-icon {
+        transform: scale(1.1);
+      }
 
-/* Download Section */
-.download-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-}
+      /* Download Section */
+      .download-section {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      }
 
-/* Responsive Adjustments */
-@media (max-width: 640px) {
-    .product-hero h1 {
-        font-size: 2rem;
-    }
-    
-    table {
-        font-size: 0.875rem;
-    }
-    
-    th, td {
-        padding: 0.5rem 0.75rem;
-    }
-}
+      /* Responsive Adjustments */
+      @media (max-width: 640px) {
+        .product-hero h1 {
+          font-size: 2rem;
+        }
 
-@media (min-width: 1024px) {
-    .product-hero {
-        min-height: 400px;
-    }
-}
+        table {
+          font-size: 0.875rem;
+        }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
+        th,
+        td {
+          padding: 0.5rem 0.75rem;
+        }
+      }
 
-/* Loading Animation */
-.loading {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+      @media (min-width: 1024px) {
+        .product-hero {
+          min-height: 400px;
+        }
+      }
 
-.loaded {
-    opacity: 1;
-}
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
 
-/* Print Styles */
-@media print {
-    .cta-button,
-    .enquiry-form {
-        display: none;
-    }
-    
-    .product-hero {
-        background: white !important;
-        color: black !important;
-    }
-}
+      /* Loading Animation */
+      .loading {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .loaded {
+        opacity: 1;
+      }
+
+      /* Print Styles */
+      @media print {
+        .cta-button,
+        .enquiry-form {
+          display: none;
+        }
+
+        .product-hero {
+          background: white !important;
+          color: black !important;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-gray-50">
-    
+  <body class="bg-gray-50">
     <!-- Include Header -->
     <div id="header-container"></div>
-    
+
     <!-- Product Hero Section -->
-   <section class="py-16 sm:py-24 relative overflow-hidden">
-    <!-- Background Video -->
-    <video 
-        class="absolute inset-0 w-full h-full object-cover" 
-        autoplay 
-        muted 
-        loop 
+    <section class="py-16 sm:py-24 relative overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover"
+        autoplay
+        muted
+        loop
         playsinline
-        poster="https://via.placeholder.com/1920x1080/333333/666666?text=Oil+Tank+Video+Loading...">
-        <source src="/Img/Video/oil tanks.mp4" type="video/mp4">
+        poster="https://via.placeholder.com/1920x1080/333333/666666?text=Oil+Tank+Video+Loading..."
+      >
+        <source src="/Img/Video/oil tanks.mp4" type="video/mp4" />
         <!-- Fallback or alternative sources -->
-        <source src="your-oil-tank-video.webm" type="video/webm">
+        <source src="your-oil-tank-video.webm" type="video/webm" />
         Your browser does not support the video tag.
-    </video>
+      </video>
 
-    <!-- Dark transparent overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      <!-- Dark transparent overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">Oil Tanks</h1>
-                <p class="text-lg sm:text-xl text-gray-300 mb-6">Precision-engineered oil storage and management solutions for industrial applications</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="Contact.html" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        Request Quote
-                    </a>
-                  
-                </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+        >
+          <div>
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white"
+            >
+              Oil Tanks
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-6">
+              Precision-engineered oil storage and management solutions for
+              industrial applications
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="Contact.html"
+                class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                Request Quote
+              </a>
             </div>
-           
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <!-- Product Description -->
-   <section class="py-12 sm:py-16 bg-gray-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section class="py-12 sm:py-16 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <!-- LEFT: Product Description -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+              Product Description
+            </h2>
 
-      <!-- LEFT: Product Description -->
-      <div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-          Product Description
+            <div class="prose max-w-none text-gray-600">
+              <p class="mb-4">
+                Carline Auto Pvt. Ltd. specializes in manufacturing high-quality
+                oil tanks designed for durability, efficiency, and optimal
+                performance in demanding industrial environments. Our oil tanks
+                are engineered to meet the specific requirements of various
+                applications, ensuring reliable storage and management of
+                lubricants and hydraulic fluids.
+              </p>
+
+              <p class="mb-4">
+                With decades of expertise in precision sheet-metal fabrication,
+                we focus on robust construction, accurate welding, and superior
+                finishing to ensure long service life and safe operation.
+              </p>
+
+              <p>
+                Each product is designed with a strong emphasis on quality
+                control, corrosion resistance, and ease of maintenance, making
+                our oil tanks a dependable choice for industrial applications.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: Product Image -->
+          <div class="w-full">
+            <div class="overflow-hidden rounded-lg shadow-lg">
+              <img
+                src="Img/oil tank.png"
+                alt="Oil Tank Product"
+                class="w-full h-full object-cover hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typical Applications Section -->
+    <section
+      id="applications"
+      class="py-16 sm:py-20 bg-gray-900 relative overflow-hidden"
+    >
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/Img/welding.jpg"
+          alt="Industrial background"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Heading -->
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
+          Typical Applications
         </h2>
 
-        <div class="prose max-w-none text-gray-600">
-          <p class="mb-4">
-            Carline Auto Pvt. Ltd. specializes in manufacturing high-quality oil tanks designed for durability, efficiency, and optimal performance in demanding industrial environments. Our oil tanks are engineered to meet the specific requirements of various applications, ensuring reliable storage and management of lubricants and hydraulic fluids.
-          </p>
+        <!-- Applications Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Automotive Industry -->
+          <div
+            class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition"
+          >
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <!-- Automotive Industry Icon -->
+              <i class="fa-solid fa-car-side text-blue-600 text-3xl"></i>
+            </div>
 
-          <p class="mb-4">
-            With decades of expertise in precision sheet-metal fabrication, we focus on robust construction, accurate welding, and superior finishing to ensure long service life and safe operation.
-          </p>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Automotive Industry
+            </h3>
+            <p class="text-sm text-gray-300">
+              Engine oil reservoirs, hydraulic tanks, transmission fluid systems
+            </p>
+          </div>
 
-          <p>
-            Each product is designed with a strong emphasis on quality control, corrosion resistance, and ease of maintenance, making our oil tanks a dependable choice for industrial applications.
-          </p>
+          <!-- Industrial Machinery -->
+          <div
+            class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition"
+          >
+            <div
+              class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <!-- Industrial / Factory Icon -->
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 21h18M5 21V9l5 3V9l5 3V7l6 4v10M9 21v-4h6v4"
+                />
+              </svg>
+            </div>
+
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Industrial Machinery
+            </h3>
+            <p class="text-sm text-gray-300">
+              Lubrication units, hydraulic power packs, compressor systems
+            </p>
+          </div>
+
+          <!-- Power Generation -->
+          <div
+            class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <!-- Lightning / Power Icon -->
+              <svg
+                class="w-8 h-8 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Power Generation
+            </h3>
+            <p class="text-sm text-gray-300">
+              Turbine oil systems, transformers, generator lubrication units
+            </p>
+          </div>
+
+          <!-- Heavy Equipment -->
+          <div
+            class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <!-- Construction Icon -->
+              <i class="fa-solid fa-truck-front text-yellow-600 text-3xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Heavy Equipment
+            </h3>
+            <p class="text-sm text-gray-300">
+              Construction, mining & agricultural machinery oil systems
+            </p>
+          </div>
         </div>
       </div>
-
-      <!-- RIGHT: Product Image -->
-      <div class="w-full">
-        <div class="overflow-hidden rounded-lg shadow-lg">
-          <img
-            src="Img/oil tank.png"
-            alt="Oil Tank Product"
-            class="w-full h-full object-cover hover:scale-105 transition duration-300"
-          />
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Typical Applications Section -->
-<section id="applications" class="py-16 sm:py-20 bg-gray-900 relative overflow-hidden">
-  <!-- Background Image with Overlay -->
-  <div class="absolute inset-0 z-0">
-    <img
-      src="/Img/welding.jpg"
-      alt="Industrial background"
-      class="w-full h-full object-cover"
-    />
-    <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
-  </div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Heading -->
-    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
-      Typical Applications
-    </h2>
-
-    <!-- Applications Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <!-- Automotive Industry -->
-      <div class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition">
-        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <!-- Car Icon -->
-          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 13l2-5a2 2 0 012-1h10a2 2 0 012 1l2 5M5 16h.01M19 16h.01M3 13v5a1 1 0 001 1h1m14-6v5a1 1 0 01-1 1h-1M5 19a2 2 0 104 0m6 0a2 2 0 104 0" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-semibold text-white mb-2">Automotive Industry</h3>
-        <p class="text-sm text-gray-300">
-          Engine oil reservoirs, hydraulic tanks, transmission fluid systems
-        </p>
-      </div>
-
-      <!-- Industrial Machinery -->
-      <div class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition">
-        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <!-- Gear Icon -->
-          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M11.983 13.828a2 2 0 100-3.656 2 2 0 000 3.656z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33h0A1.65 1.65 0 009 3.09V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51h0a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v0a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-semibold text-white mb-2">Industrial Machinery</h3>
-        <p class="text-sm text-gray-300">
-          Lubrication units, hydraulic power packs, compressor systems
-        </p>
-      </div>
-
-      <!-- Power Generation -->
-      <div class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition">
-        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <!-- Lightning / Power Icon -->
-          <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-semibold text-white mb-2">Power Generation</h3>
-        <p class="text-sm text-gray-300">
-          Turbine oil systems, transformers, generator lubrication units
-        </p>
-      </div>
-
-      <!-- Heavy Equipment -->
-      <div class="bg-[#0f172a] p-6 rounded-xl shadow-lg border border-gray-700 text-center hover:shadow-xl transition">
-        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <!-- Truck / Construction Icon -->
-          <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 17a2 2 0 104 0m-9-4V5a2 2 0 012-2h8a2 2 0 012 2v8m-14 0h14l3 4v2a1 1 0 01-1 1h-1a2 2 0 10-4 0H9a2 2 0 10-4 0H4a1 1 0 01-1-1v-2l3-4z" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-semibold text-white mb-2">Heavy Equipment</h3>
-        <p class="text-sm text-gray-300">
-          Construction, mining & agricultural machinery oil systems
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
+    </section>
 
     <!-- Available Materials -->
     <section class="py-12 sm:py-16 bg-white-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">Available Materials</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-whitw-900" style="color:white;">Stainless Steel 304</h3>
-                    </div>
-                    <p class="text-white-600 mb-4" style="color:white;">Excellent corrosion resistance, suitable for most industrial applications. Ideal for food processing, chemical, and pharmaceutical industries.</p>
-                    <ul class="text-sm text-white-600 space-y-1" style="color:white;">
-                        <li>• Good formability and weldability</li>
-                        <li>• Resistant to oxidation and corrosion</li>
-                        <li>• Hygienic and easy to clean</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white-900"  style="color:white;">Stainless Steel 316</h3>
-                    </div>
-                    <p class="text-white-600 mb-4"  style="color:white;">Superior corrosion resistance, especially against chlorides and acids. Recommended for marine, chemical, and high-corrosion environments.</p>
-                    <ul class="text-sm text-white-600 space-y-1"  style="color:white;">
-                        <li>• Excellent resistance to pitting and crevice corrosion</li>
-                        <li>• Suitable for harsh chemical environments</li>
-                        <li>• Higher temperature resistance</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white-900"  style="color:white;">Mild Steel</h3>
-                    </div>
-                    <p class="text-white-600 mb-4"  style="color:white;">Cost-effective solution with good mechanical properties. Suitable for non-corrosive applications with proper surface treatment.</p>
-                    <ul class="text-sm text-white-600 space-y-1"  style="color:white;">
-                        <li>• Economical and readily available</li>
-                        <li>• Good strength and formability</li>
-                        <li>• Requires protective coating for corrosion resistance</li>
-                    </ul>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center"
+        >
+          Available Materials
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-6 h-6 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-whitw-900" style="color: white">
+                Stainless Steel 304
+              </h3>
             </div>
+            <p class="text-white-600 mb-4" style="color: white">
+              Excellent corrosion resistance, suitable for most industrial
+              applications. Ideal for food processing, chemical, and
+              pharmaceutical industries.
+            </p>
+            <ul class="text-sm text-white-600 space-y-1" style="color: white">
+              <li>• Good formability and weldability</li>
+              <li>• Resistant to oxidation and corrosion</li>
+              <li>• Hygienic and easy to clean</li>
+            </ul>
+          </div>
+
+          <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-6 h-6 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white-900" style="color: white">
+                Stainless Steel 316
+              </h3>
+            </div>
+            <p class="text-white-600 mb-4" style="color: white">
+              Superior corrosion resistance, especially against chlorides and
+              acids. Recommended for marine, chemical, and high-corrosion
+              environments.
+            </p>
+            <ul class="text-sm text-white-600 space-y-1" style="color: white">
+              <li>• Excellent resistance to pitting and crevice corrosion</li>
+              <li>• Suitable for harsh chemical environments</li>
+              <li>• Higher temperature resistance</li>
+            </ul>
+          </div>
+
+          <div class="bg-[#0f172a] p-6 rounded-lg border border-gray-200">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-6 h-6 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white-900" style="color: white">
+                Mild Steel
+              </h3>
+            </div>
+            <p class="text-white-600 mb-4" style="color: white">
+              Cost-effective solution with good mechanical properties. Suitable
+              for non-corrosive applications with proper surface treatment.
+            </p>
+            <ul class="text-sm text-white-600 space-y-1" style="color: white">
+              <li>• Economical and readily available</li>
+              <li>• Good strength and formability</li>
+              <li>• Requires protective coating for corrosion resistance</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    
-
-    
     <!-- Include Footer -->
     <div id="footer-container"></div>
-    
+
     <!-- Load Header and Footer using fetch -->
     <script>
-        // Load Header
-        fetch('/Header/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-                // Load header JS after header is inserted
-                const headerScript = document.createElement('script');
-                headerScript.src = '/Header/header.js';
-                document.body.appendChild(headerScript);
-            })
-            .catch(error => console.error('Error loading header:', error));
+      // Load Header
+      fetch("/Header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+          // Load header JS after header is inserted
+          const headerScript = document.createElement("script");
+          headerScript.src = "/Header/header.js";
+          document.body.appendChild(headerScript);
+        })
+        .catch((error) => console.error("Error loading header:", error));
 
-        // Load Footer
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
+      // Load Footer
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
     </script>
-    
-    <script>
-        // OilTanks.js
 
-(function() {
-    'use strict';
-    
-    // Initialize page functionality
-    function initializeOilTanksPage() {
-        // Form submission handler
-        const enquiryForm = document.getElementById('oilTankEnquiryForm');
-        if (enquiryForm) {
-            enquiryForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Basic form validation
-                const requiredFields = enquiryForm.querySelectorAll('[required]');
-                let isValid = true;
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        isValid = false;
-                        field.classList.add('border-red-500');
-                    } else {
-                        field.classList.remove('border-red-500');
-                    }
-                });
-                
-                if (isValid) {
-                    // In a real application, you would send the form data to a server
-                    // For this example, we'll just show a success message
-                    showFormSuccessMessage();
+    <script>
+      // OilTanks.js
+
+      (function () {
+        "use strict";
+
+        // Initialize page functionality
+        function initializeOilTanksPage() {
+          // Form submission handler
+          const enquiryForm = document.getElementById("oilTankEnquiryForm");
+          if (enquiryForm) {
+            enquiryForm.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              // Basic form validation
+              const requiredFields = enquiryForm.querySelectorAll("[required]");
+              let isValid = true;
+
+              requiredFields.forEach((field) => {
+                if (!field.value.trim()) {
+                  isValid = false;
+                  field.classList.add("border-red-500");
                 } else {
-                    alert('Please fill in all required fields.');
+                  field.classList.remove("border-red-500");
                 }
+              });
+
+              if (isValid) {
+                // In a real application, you would send the form data to a server
+                // For this example, we'll just show a success message
+                showFormSuccessMessage();
+              } else {
+                alert("Please fill in all required fields.");
+              }
             });
-        }
-        
-        // Add loading state to images
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            img.addEventListener('load', function() {
-                this.classList.add('loaded');
+          }
+
+          // Add loading state to images
+          const images = document.querySelectorAll("img");
+          images.forEach((img) => {
+            img.addEventListener("load", function () {
+              this.classList.add("loaded");
             });
-            
+
             // If image is already loaded
             if (img.complete) {
-                img.classList.add('loaded');
+              img.classList.add("loaded");
             }
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+          });
+
+          // Smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              const targetId = this.getAttribute("href");
+              if (targetId === "#") return;
+
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                targetElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
             });
-        });
-        
-        console.log('Oil Tanks page initialized successfully');
-    }
-    
-    // Show success message after form submission
-    function showFormSuccessMessage() {
-        const form = document.getElementById('oilTankEnquiryForm');
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        // Change button text to show loading state
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-        
-        // Simulate API call delay
-        setTimeout(() => {
+          });
+
+          console.log("Oil Tanks page initialized successfully");
+        }
+
+        // Show success message after form submission
+        function showFormSuccessMessage() {
+          const form = document.getElementById("oilTankEnquiryForm");
+          const submitButton = form.querySelector('button[type="submit"]');
+          const originalText = submitButton.textContent;
+
+          // Change button text to show loading state
+          submitButton.textContent = "Sending...";
+          submitButton.disabled = true;
+
+          // Simulate API call delay
+          setTimeout(() => {
             // Reset form
             form.reset();
-            
+
             // Show success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg';
+            const successMessage = document.createElement("div");
+            successMessage.className =
+              "mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg";
             successMessage.innerHTML = `
                 <div class="flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -491,27 +613,27 @@ html {
                     <span>Thank you for your enquiry! We will contact you shortly.</span>
                 </div>
             `;
-            
+
             form.appendChild(successMessage);
-            
+
             // Reset button
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-            
+
             // Remove success message after 5 seconds
             setTimeout(() => {
-                successMessage.remove();
+              successMessage.remove();
             }, 5000);
-        }, 1500);
-    }
-    
-    // Auto-initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializeOilTanksPage);
-    } else {
-        initializeOilTanksPage();
-    }
-})();
+          }, 1500);
+        }
+
+        // Auto-initialize when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initializeOilTanksPage);
+        } else {
+          initializeOilTanksPage();
+        }
+      })();
     </script>
-</body>
+  </body>
 </html>
