@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,8 @@
 
       .material-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.1),
           0 10px 10px -5px rgba(0, 0, 0, 0.04);
         border-color: #3b82f6;
       }
@@ -33,7 +34,8 @@
 
       .application-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
           0 2px 4px -1px rgba(0, 0, 0, 0.06);
       }
 
@@ -222,143 +224,259 @@
     </section>
 
     <!-- Available Materials -->
-  <section class="py-12 relative overflow-hidden">
-  <!-- Background Video -->
-  <video
-    class="absolute inset-0 w-full h-full object-cover -z-10"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-  >
-    <source src="/Img/Video/welding.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+    <section class="py-12 relative overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="/Img/Video/welding.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-  <!-- Dark overlay for text readability -->
-  <div class="absolute inset-0 bg-black opacity-60 -z-10"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl sm:text-3xl font-bold text-white-900 mb-8 text-center" style="color: white">
-      Available Materials
-    </h2>
+      <!-- Dark overlay for text readability -->
+      <div class="absolute inset-0 bg-black opacity-60 -z-10"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-white-900 mb-8 text-center"
+          style="color: white"
+        >
+          Available Materials
+        </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Existing 3 cards -->
-      <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white">
-        <h3 class="text-xl font-bold text-white-800 mb-3">Stainless Steel 304</h3>
-        <p class="text-white-600 mb-4">
-          Excellent corrosion resistance, suitable for food, pharmaceutical and chemical industries.
-        </p>
-        <ul class="text-sm text-white-600 space-y-2">
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>High corrosion resistance</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Hygienic and easy to clean</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Good mechanical properties</span>
-          </li>
-        </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Existing 3 cards -->
+          <div
+            class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white"
+          >
+            <h3 class="text-xl font-bold text-white-800 mb-3">
+              Stainless Steel 304
+            </h3>
+            <p class="text-white-600 mb-4">
+              Excellent corrosion resistance, suitable for food, pharmaceutical
+              and chemical industries.
+            </p>
+            <ul class="text-sm text-white-600 space-y-2">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>High corrosion resistance</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Hygienic and easy to clean</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Good mechanical properties</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Stainless Steel 316 -->
+          <div
+            class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white"
+          >
+            <h3 class="text-xl font-bold text-white-800 mb-3">
+              Stainless Steel 316
+            </h3>
+            <p class="text-white-600 mb-4">
+              Superior corrosion resistance, ideal for marine and chemical
+              processing applications.
+            </p>
+            <ul class="text-sm text-white-600 space-y-2">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Enhanced corrosion resistance</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Resistant to chlorides</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>High temperature strength</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Carbon Steel -->
+          <div
+            class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white"
+          >
+            <h3 class="text-xl font-bold text-white-800 mb-3">Carbon Steel</h3>
+            <p class="text-white-600 mb-4">
+              Cost-effective solution for general industrial applications with
+              proper coating options.
+            </p>
+            <ul class="text-sm text-white-600 space-y-2">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Cost-effective</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>High strength-to-weight ratio</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Various coating options available</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- New MS (Mild Steel) Card -->
+          <div
+            class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white"
+          >
+            <h3 class="text-xl font-bold text-white-800 mb-3">
+              MS (Mild Steel)
+            </h3>
+            <p class="text-white-600 mb-4">
+              Versatile and cost-effective material widely used in industrial
+              fabrication and tanks.
+            </p>
+            <ul class="text-sm text-white-600 space-y-2">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Cost-effective</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Easy to fabricate</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Good mechanical strength</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <!-- Stainless Steel 316 -->
-      <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white">
-        <h3 class="text-xl font-bold text-white-800 mb-3">Stainless Steel 316</h3>
-        <p class="text-white-600 mb-4">
-          Superior corrosion resistance, ideal for marine and chemical processing applications.
-        </p>
-        <ul class="text-sm text-white-600 space-y-2">
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Enhanced corrosion resistance</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Resistant to chlorides</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>High temperature strength</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Carbon Steel -->
-      <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white">
-        <h3 class="text-xl font-bold text-white-800 mb-3">Carbon Steel</h3>
-        <p class="text-white-600 mb-4">
-          Cost-effective solution for general industrial applications with proper coating options.
-        </p>
-        <ul class="text-sm text-white-600 space-y-2">
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Cost-effective</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>High strength-to-weight ratio</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Various coating options available</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- New MS (Mild Steel) Card -->
-      <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-white">
-        <h3 class="text-xl font-bold text-white-800 mb-3">MS (Mild Steel)</h3>
-        <p class="text-white-600 mb-4">
-          Versatile and cost-effective material widely used in industrial fabrication and tanks.
-        </p>
-        <ul class="text-sm text-white-600 space-y-2">
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Cost-effective</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Easy to fabricate</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span>Good mechanical strength</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Technical Specifications -->
     <section class="py-14 bg-gray-100">
