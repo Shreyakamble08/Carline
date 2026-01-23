@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -55,7 +55,8 @@
 
       .bg-white:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.1),
           0 10px 10px -5px rgba(0, 0, 0, 0.04);
       }
 
@@ -174,25 +175,58 @@
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
         >
+          <!-- Content -->
           <div>
             <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Precision Press Operations
             </h2>
-            <p class="text-gray-600 mb-6">
+
+            <p class="text-gray-600 mb-5">
               Our state-of-the-art press shop is equipped with advanced
-              machinery capable of handling a wide range of metal forming and
-              stamping operations. With capacities ranging from 30T to 300T, we
-              can produce components with high precision and repeatability.
+              mechanical and hydraulic presses capable of handling a wide range
+              of metal forming and stamping operations. With press capacities
+              ranging from
+              <strong>30 tons to 300 tons</strong>, we ensure high precision,
+              consistency, and repeatability across large production volumes.
             </p>
-            <p class="text-gray-600 mb-6">
-              Our experienced team specializes in deep drawing, blanking,
-              piercing, bending, and forming operations for various materials
-              including mild steel, stainless steel, and aluminum.
+
+            <p class="text-gray-600 mb-5">
+              We specialize in
+              <strong
+                >deep drawing, blanking, piercing, bending, embossing, and
+                progressive tooling operations</strong
+              >
+              for a variety of materials including mild steel, stainless steel,
+              aluminum, and coated sheets.
             </p>
+
+            <p class="text-gray-600 mb-5">
+              Our in-house tooling support, preventive maintenance schedules,
+              and strict process controls enable us to deliver components that
+              meet tight dimensional tolerances and industry quality standards.
+            </p>
+
+            <!-- Highlights -->
+            <ul class="grid grid-cols-2 gap-4 mt-6 text-sm text-gray-700">
+              <li class="flex items-center gap-2">
+                ✔ Press Capacity: 30T – 300T
+              </li>
+              <li class="flex items-center gap-2">
+                ✔ Progressive & Single-Stage Presses
+              </li>
+              <li class="flex items-center gap-2">
+                ✔ High-Volume Production Capability
+              </li>
+              <li class="flex items-center gap-2">
+                ✔ Dimensional & Visual Quality Checks
+              </li>
+            </ul>
           </div>
+
+          <!-- Image -->
           <div class="relative">
             <img
-              src="/Img/stamping.webp"
+              src="/Img/pressshop.jpeg"
               alt="Press Shop at Carline Auto"
               class="rounded-lg shadow-lg w-full"
             />
@@ -414,100 +448,64 @@
     </section>
 
     <!-- Machine Inventory -->
-    <section class="py-12 sm:py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Heading -->
-        <div class="text-center mb-10">
-          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-            Press Shop Equipment
-          </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Our comprehensive range of press machines enables us to handle
-            projects of varying scale and technical complexity.
-          </p>
-        </div>
-
-        <!-- Table Wrapper -->
-        <div class="overflow-x-auto">
-          <table
-            class="w-11/12 mx-auto border border-gray-200 shadow-md rounded-lg overflow-hidden divide-y divide-gray-200"
-          >
-            <thead class="bg-gray-800 text-white">
-              <tr>
-                <th
-                  class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider border-r border-gray-600"
-                >
-                  Sr. No.
+    <section class="py-12 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-4">
+        <div
+          class="bg-white rounded-xl shadow-sm border border-gray-300 overflow-x-auto"
+        >
+          <table class="w-full border-collapse text-sm text-gray-800">
+            <!-- Table Head -->
+            <thead>
+              <tr class="bg-gray-800 text-white">
+                <th class="px-6 py-3 text-left border border-gray-300">Sr</th>
+                <th class="px-6 py-3 text-left border border-gray-300">
+                  Press type
                 </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider border-r border-gray-600"
-                >
-                  Machine Name / Make
+                <th class="px-6 py-3 text-left border border-gray-300">
+                  Shut hight in mm
                 </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider border-r border-gray-600"
-                >
-                  Model / No.
-                </th>
-                <th
-                  class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider"
-                >
-                  Capacity / Spec
+                <th class="px-6 py-3 text-left border border-gray-300">
+                  Bed size in mm
                 </th>
               </tr>
             </thead>
 
-            <tbody class="bg-white divide-y divide-gray-200 text-gray-700">
-              <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3 text-sm border-r">1</td>
-                <td class="px-4 py-3 text-sm border-r">Hydraulic Press</td>
-                <td class="px-4 py-3 text-sm border-r text-gray-500">
-                  HP-300T
+            <!-- Table Body -->
+            <tbody>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 border border-gray-300">1</td>
+                <td class="px-6 py-4 border border-gray-300 font-medium">
+                  300 T Hydralic Press
                 </td>
-                <td class="px-4 py-3 text-sm text-gray-500">300 Ton</td>
+                <td class="px-6 py-4 border border-gray-300">adjustable</td>
+                <td class="px-6 py-4 border border-gray-300">1000 x 1300</td>
               </tr>
 
-              <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3 text-sm border-r">2</td>
-                <td class="px-4 py-3 text-sm border-r">
-                  Mechanical Power Press
+              <tr>
+                <td class="px-6 py-4 border border-gray-300">2</td>
+                <td class="px-6 py-4 border border-gray-300 font-medium">
+                  200 T Mechanical Press
                 </td>
-                <td class="px-4 py-3 text-sm border-r text-gray-500">
-                  MP-150T
-                </td>
-                <td class="px-4 py-3 text-sm text-gray-500">150 Ton</td>
+                <td class="px-6 py-4 border border-gray-300">400</td>
+                <td class="px-6 py-4 border border-gray-300">850 x 900</td>
               </tr>
 
-              <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3 text-sm border-r">3</td>
-                <td class="px-4 py-3 text-sm border-r">C-Frame Press</td>
-                <td class="px-4 py-3 text-sm border-r text-gray-500">CF-80T</td>
-                <td class="px-4 py-3 text-sm text-gray-500">80 Ton</td>
-              </tr>
-
-              <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3 text-sm border-r">4</td>
-                <td class="px-4 py-3 text-sm border-r">Fly Press</td>
-                <td class="px-4 py-3 text-sm border-r text-gray-500">FP-30T</td>
-                <td class="px-4 py-3 text-sm text-gray-500">30 Ton</td>
-              </tr>
-
-              <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3 text-sm border-r">5</td>
-                <td class="px-4 py-3 text-sm border-r">Hydraulic Press</td>
-                <td class="px-4 py-3 text-sm border-r text-gray-500">
-                  HP-100T
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 border border-gray-300">3</td>
+                <td class="px-6 py-4 border border-gray-300 font-medium">
+                  150 T Double action Press
                 </td>
-                <td class="px-4 py-3 text-sm text-gray-500">100 Ton</td>
+                <td class="px-6 py-4 border border-gray-300">345</td>
+                <td class="px-6 py-4 border border-gray-300">450 x 600</td>
               </tr>
 
-              <tr class="hover:bg-gray-50 transition">
-                <td class="px-4 py-3 text-sm border-r">6</td>
-                <td class="px-4 py-3 text-sm border-r">Deep Drawing Press</td>
-                <td class="px-4 py-3 text-sm border-r text-gray-500">
-                  DDP-200T
+              <tr>
+                <td class="px-6 py-4 border border-gray-300">4</td>
+                <td class="px-6 py-4 border border-gray-300 font-medium">
+                  75T Mechanical Press
                 </td>
-                <td class="px-4 py-3 text-sm text-gray-500">200 Ton</td>
+                <td class="px-6 py-4 border border-gray-300"></td>
+                <td class="px-6 py-4 border border-gray-300">400 x 300</td>
               </tr>
             </tbody>
           </table>

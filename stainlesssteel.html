@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +24,8 @@
 
     .product-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+      box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
 
@@ -113,113 +114,152 @@
     <div id="header-container"></div>
 
     <!-- Hero Section -->
-<section class="relative py-24 bg-gray-900 overflow-hidden">
-  <!-- Background Image -->
-  <img
-    src="/Img/subaa.jpg"
-    alt="stainlesssteel background"
-    class="absolute inset-0 w-full h-full object-cover opacity-60"
-  />
+    <section class="relative py-24 bg-gray-900 overflow-hidden">
+      <!-- Background Image -->
+      <img
+        src="/Img/subaa.jpg"
+        alt="stainlesssteel background"
+        class="absolute inset-0 w-full h-full object-cover opacity-60"
+      />
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+      <!-- Overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"
+      ></div>
 
-  <!-- Content -->
- <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-  <div class="max-w-2xl bg-black/70 backdrop-blur-md p-10 shadow-lg">
-    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-      Stainless Steel Products
-    </h1>
+      <!-- Content -->
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-2xl bg-black/70 backdrop-blur-md p-10 shadow-lg">
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
+          >
+            Stainless Steel Products
+          </h1>
 
-    <p class="text-gray-200 text-lg leading-relaxed">
-      Precision-engineered sub-assemblies designed for high performance,
-      durability, and accuracy across automotive and industrial applications.
-    </p>
-
-  </div>
-</div>
-
-</section>
-
+          <p class="text-gray-200 text-lg leading-relaxed">
+            Precision-engineered sub-assemblies designed for high performance,
+            durability, and accuracy across automotive and industrial
+            applications.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Products Overview -->
     <section class="py-12 sm:py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10 -mt-6">
-  <h2
-    class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
-  >
-    Our <span class="text-blue-600">Stainless Steel Products</span>
-  </h2>
-</div>
-
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+          >
+            Our <span class="text-blue-600">Stainless Steel Products</span>
+          </h2>
+        </div>
 
         <!-- Product Cards -->
-   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Product 1 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-72">
+              <img
+                src="/Img/ss barckets.jpg"
+                alt="Engine Mounting Brackets"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-semibold text-white">Brackets</h3>
+            </div>
+          </div>
 
-  <!-- Product 1 -->
-  <div class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-    <div class="h-72">
-      <img src="/Img/ss barckets.jpg" alt="Engine Mounting Brackets" class="w-full h-full object-cover">
-    </div>
-    <div class="p-5 text-center">
-      <h3 class="text-lg font-semibold text-white">Brackets</h3>
-    </div>
-  </div>
+          <!-- Product 2 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-72">
+              <img
+                src="/Img/SS 304 Drawn comp .jpg"
+                alt="304 Drawn Component"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-semibold text-white">
+                304 Drawn Component
+              </h3>
+            </div>
+          </div>
 
-  <!-- Product 2 -->
-  <div class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-    <div class="h-72">
-      <img src="/Img/SS 304 Drawn comp .jpg" alt="304 Drawn Component" class="w-full h-full object-cover">
-    </div>
-    <div class="p-5 text-center">
-      <h3 class="text-lg font-semibold text-white">304 Drawn Component</h3>
-    </div>
-  </div>
+          <!-- Product 3 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-72">
+              <img
+                src="/Img/ss cap.png"
+                alt="304 Shell Cap"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-semibold text-white">304 Shell Cap</h3>
+            </div>
+          </div>
 
-  <!-- Product 3 -->
-  <div class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-    <div class="h-72">
-      <img src="/Img/SS 304 Shell cap .jpg" alt="304 Shell Cap" class="w-full h-full object-cover">
-    </div>
-    <div class="p-5 text-center">
-      <h3 class="text-lg font-semibold text-white">304 Shell Cap</h3>
-    </div>
-  </div>
+          <!-- Product 4 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-72">
+              <img
+                src="/Img/ss parts- tough ss304 length 1040mm.jpg"
+                alt="SS 304 Tough Part"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-semibold text-white">
+                Tough SS 304 (1040 mm)
+              </h3>
+            </div>
+          </div>
 
-  <!-- Product 4 -->
-  <div class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-    <div class="h-72">
-      <img src="/Img/ss parts- tough ss304 length 1040mm.jpg" alt="SS 304 Tough Part" class="w-full h-full object-cover">
-    </div>
-    <div class="p-5 text-center">
-      <h3 class="text-lg font-semibold text-white">Tough SS 304 (1040 mm)</h3>
-    </div>
-  </div>
+          <!-- Product 5 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-72">
+              <img
+                src="/Img/SS parts - heat sheild.jpg"
+                alt="Heat Shield"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-semibold text-white">Heat Shield</h3>
+            </div>
+          </div>
 
-  <!-- Product 5 -->
-  <div class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-    <div class="h-72">
-      <img src="/Img/SS parts - heat sheild.jpg" alt="Heat Shield" class="w-full h-full object-cover">
-    </div>
-    <div class="p-5 text-center">
-      <h3 class="text-lg font-semibold text-white">Heat Shield</h3>
-    </div>
-  </div>
-
-  <!-- Product 6 -->
-  <div class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-    <div class="h-72">
-      <img src="/Img/SS 304 Shell Assy .jpg" alt="304 Shell Assembly" class="w-full h-full object-cover">
-    </div>
-    <div class="p-5 text-center">
-      <h3 class="text-lg font-semibold text-white">304 Shell Assembly</h3>
-    </div>
-  </div>
-
-</div>
-
-
+          <!-- Product 6 -->
+          <div
+            class="bg-[#0f172a] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+          >
+            <div class="h-72">
+              <img
+                src="/Img/SS 304 Shell Assy .jpg"
+                alt="304 Shell Assembly"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-semibold text-white">
+                304 Shell Assembly
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -338,7 +378,7 @@
         // Function to handle product image loading
         function initializeProductImages() {
           const productImages = document.querySelectorAll(
-            ".product-image-placeholder"
+            ".product-image-placeholder",
           );
 
           productImages.forEach((placeholder) => {
@@ -359,7 +399,7 @@
         if (document.readyState === "loading") {
           document.addEventListener(
             "DOMContentLoaded",
-            initializeSubAssembliesPage
+            initializeSubAssembliesPage,
           );
         } else {
           initializeSubAssembliesPage();
